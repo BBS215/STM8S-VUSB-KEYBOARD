@@ -13,6 +13,7 @@
 - Пины порта С можно использовать только как GPIO входы.
 
 Среда разработки - STVD 4.3.11
+
 Компилятор - Cosmic cross compiler v.4.4.7
 
 Схема: https://github.com/BBS215/STM8S-VUSB-KEYBOARD/blob/master/SCHEME/Scheme.pdf
