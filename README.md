@@ -14,6 +14,7 @@
 
 Среда разработки - STVD 4.3.11
 Компилятор - Cosmic cross compiler v.4.4.7
+Схема: https://github.com/BBS215/STM8S-VUSB-KEYBOARD/blob/master/SCHEME/Scheme.pdf
 
 Для нормальной работы, нужно установить настройки OPTION BYTE:
 1) AFR0: PORT C7 Alternate Function = TIM1_CH2
