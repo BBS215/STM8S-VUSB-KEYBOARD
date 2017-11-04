@@ -1,0 +1,941 @@
+
+Map of Release\stm8_vusb.sm8 from link file Release\stm8_vusb.lkf - Wed Nov 01 15:23:18 2017
+
+
+                               --------
+                               Segments
+                               --------
+
+start 00008080 end 000081c9 length   329 segment .const
+start 000081d9 end 00009587 length  5038 segment .text
+start 00004000 end 00004000 length     0 segment .eeprom
+start 00000000 end 00000008 length     8 segment .bsct, initialized
+start 000081d1 end 000081d9 length     8 segment .bsct, from
+start 00000008 end 0000008f length   135 segment .ubsct
+start 0000008f end 0000008f length     0 segment .bit
+start 0000008f end 0000008f length     0 segment .share
+start 00000100 end 00000100 length     0 segment .data
+start 00000100 end 00000100 length     0 segment .bss
+start 00000000 end 00000859 length  2137 segment .info.
+start 00008000 end 00008080 length   128 segment .const
+start 000081c9 end 000081d1 length     8 segment .init
+
+
+                               -------
+                               Modules
+                               -------
+
+C:\Program Files (x86)\COSMIC\FSE_Compilers\CXSTM8\lib\crtsi0.sm8:
+start 000081d9 end 00008229 length    80 section .text
+start 00000100 end 00000100 length     0 section .bss
+start 00000008 end 00000008 length     0 section .ubsct
+start 00000000 end 00000034 length    52 section .info.
+
+Release\stm8s_clk.o:
+start 00000034 end 000000d3 length   159 section .info.
+start ******** end ******** length     0 section .const *** removed ***
+start ******** end ******** length     0 section .text *** removed ***
+start ******** end ******** length     0 section .text *** removed ***
+start ******** end ******** length     0 section .text *** removed ***
+start ******** end ******** length     0 section .text *** removed ***
+start ******** end ******** length     0 section .text *** removed ***
+start ******** end ******** length     0 section .text *** removed ***
+start ******** end ******** length     0 section .text *** removed ***
+start ******** end ******** length     0 section .text *** removed ***
+start 00008229 end 00008283 length    90 section .text
+start ******** end ******** length     0 section .text *** removed ***
+start ******** end ******** length     0 section .text *** removed ***
+start ******** end ******** length     0 section .text *** removed ***
+start ******** end ******** length     0 section .text *** removed ***
+start ******** end ******** length     0 section .text *** removed ***
+start ******** end ******** length     0 section .text *** removed ***
+start ******** end ******** length     0 section .text *** removed ***
+start ******** end ******** length     0 section .text *** removed ***
+start ******** end ******** length     0 section .text *** removed ***
+start ******** end ******** length     0 section .text *** removed ***
+start ******** end ******** length     0 section .text *** removed ***
+start ******** end ******** length     0 section .text *** removed ***
+start ******** end ******** length     0 section .text *** removed ***
+start ******** end ******** length     0 section .text *** removed ***
+
+Release\stm8s_gpio.o:
+start 000000d3 end 00000173 length   160 section .info.
+start 00008283 end 0000828b length     8 section .text
+start 0000828b end 000082dc length    81 section .text
+start ******** end ******** length     0 section .text *** removed ***
+start 000082dc end 000082e1 length     5 section .text
+start 000082e1 end 000082e7 length     6 section .text
+start ******** end ******** length     0 section .text *** removed ***
+start ******** end ******** length     0 section .text *** removed ***
+start ******** end ******** length     0 section .text *** removed ***
+start 000082e7 end 000082ec length     5 section .text
+start ******** end ******** length     0 section .text *** removed ***
+
+Release\stm8s_tim1.o:
+start 00000173 end 00000213 length   160 section .info.
+start ******** end ******** length     0 section .text *** removed ***
+start 000082ec end 0000830e length    34 section .text
+start ******** end ******** length     0 section .text *** removed ***
+start ******** end ******** length     0 section .text *** removed ***
+start ******** end ******** length     0 section .text *** removed ***
+start ******** end ******** length     0 section .text *** removed ***
+start ******** end ******** length     0 section .text *** removed ***
+start 0000830e end 0000836d length    95 section .text
+start ******** end ******** length     0 section .text *** removed ***
+start ******** end ******** length     0 section .text *** removed ***
+start ******** end ******** length     0 section .text *** removed ***
+start 0000836d end 00008383 length    22 section .text
+start ******** end ******** length     0 section .text *** removed ***
+start ******** end ******** length     0 section .text *** removed ***
+start ******** end ******** length     0 section .text *** removed ***
+start ******** end ******** length     0 section .text *** removed ***
+start ******** end ******** length     0 section .text *** removed ***
+start 00008383 end 00008390 length    13 section .text
+start ******** end ******** length     0 section .text *** removed ***
+start ******** end ******** length     0 section .text *** removed ***
+start ******** end ******** length     0 section .text *** removed ***
+start ******** end ******** length     0 section .text *** removed ***
+start ******** end ******** length     0 section .text *** removed ***
+start 00008390 end 0000839d length    13 section .text
+start ******** end ******** length     0 section .text *** removed ***
+start ******** end ******** length     0 section .text *** removed ***
+start ******** end ******** length     0 section .text *** removed ***
+start ******** end ******** length     0 section .text *** removed ***
+start ******** end ******** length     0 section .text *** removed ***
+start ******** end ******** length     0 section .text *** removed ***
+start ******** end ******** length     0 section .text *** removed ***
+start ******** end ******** length     0 section .text *** removed ***
+start ******** end ******** length     0 section .text *** removed ***
+start ******** end ******** length     0 section .text *** removed ***
+start ******** end ******** length     0 section .text *** removed ***
+start ******** end ******** length     0 section .text *** removed ***
+start ******** end ******** length     0 section .text *** removed ***
+start ******** end ******** length     0 section .text *** removed ***
+start ******** end ******** length     0 section .text *** removed ***
+start ******** end ******** length     0 section .text *** removed ***
+start ******** end ******** length     0 section .text *** removed ***
+start ******** end ******** length     0 section .text *** removed ***
+start ******** end ******** length     0 section .text *** removed ***
+start ******** end ******** length     0 section .text *** removed ***
+start ******** end ******** length     0 section .text *** removed ***
+start ******** end ******** length     0 section .text *** removed ***
+start ******** end ******** length     0 section .text *** removed ***
+start ******** end ******** length     0 section .text *** removed ***
+start ******** end ******** length     0 section .text *** removed ***
+start ******** end ******** length     0 section .text *** removed ***
+start ******** end ******** length     0 section .text *** removed ***
+start ******** end ******** length     0 section .text *** removed ***
+start ******** end ******** length     0 section .text *** removed ***
+start ******** end ******** length     0 section .text *** removed ***
+start ******** end ******** length     0 section .text *** removed ***
+start ******** end ******** length     0 section .text *** removed ***
+start ******** end ******** length     0 section .text *** removed ***
+start ******** end ******** length     0 section .text *** removed ***
+start ******** end ******** length     0 section .text *** removed ***
+start ******** end ******** length     0 section .text *** removed ***
+start 0000839d end 000083aa length    13 section .text
+start 000083aa end 000083b7 length    13 section .text
+start 000083b7 end 000083c4 length    13 section .text
+start 000083c4 end 000083d1 length    13 section .text
+start ******** end ******** length     0 section .text *** removed ***
+start ******** end ******** length     0 section .text *** removed ***
+start ******** end ******** length     0 section .text *** removed ***
+start ******** end ******** length     0 section .text *** removed ***
+start ******** end ******** length     0 section .text *** removed ***
+start ******** end ******** length     0 section .text *** removed ***
+start ******** end ******** length     0 section .text *** removed ***
+start 000083d1 end 000083e1 length    16 section .text
+start ******** end ******** length     0 section .text *** removed ***
+start ******** end ******** length     0 section .text *** removed ***
+start 000083e1 end 00008411 length    48 section .text
+start 00008411 end 00008441 length    48 section .text
+start 00008441 end 00008471 length    48 section .text
+start 00008471 end 000084a1 length    48 section .text
+
+Release\stm8s_tim2.o:
+start 00000213 end 000002b3 length   160 section .info.
+start 000084a1 end 000084fa length    89 section .text
+start 000084fa end 00008508 length    14 section .text
+start ******** end ******** length     0 section .text *** removed ***
+start ******** end ******** length     0 section .text *** removed ***
+start ******** end ******** length     0 section .text *** removed ***
+start ******** end ******** length     0 section .text *** removed ***
+start ******** end ******** length     0 section .text *** removed ***
+start 00008508 end 00008515 length    13 section .text
+start 00008515 end 0000852b length    22 section .text
+start ******** end ******** length     0 section .text *** removed ***
+start ******** end ******** length     0 section .text *** removed ***
+start ******** end ******** length     0 section .text *** removed ***
+start ******** end ******** length     0 section .text *** removed ***
+start ******** end ******** length     0 section .text *** removed ***
+start ******** end ******** length     0 section .text *** removed ***
+start ******** end ******** length     0 section .text *** removed ***
+start ******** end ******** length     0 section .text *** removed ***
+start ******** end ******** length     0 section .text *** removed ***
+start ******** end ******** length     0 section .text *** removed ***
+start ******** end ******** length     0 section .text *** removed ***
+start ******** end ******** length     0 section .text *** removed ***
+start ******** end ******** length     0 section .text *** removed ***
+start ******** end ******** length     0 section .text *** removed ***
+start ******** end ******** length     0 section .text *** removed ***
+start ******** end ******** length     0 section .text *** removed ***
+start ******** end ******** length     0 section .text *** removed ***
+start ******** end ******** length     0 section .text *** removed ***
+start ******** end ******** length     0 section .text *** removed ***
+start ******** end ******** length     0 section .text *** removed ***
+start ******** end ******** length     0 section .text *** removed ***
+start ******** end ******** length     0 section .text *** removed ***
+start ******** end ******** length     0 section .text *** removed ***
+start ******** end ******** length     0 section .text *** removed ***
+start ******** end ******** length     0 section .text *** removed ***
+start ******** end ******** length     0 section .text *** removed ***
+start ******** end ******** length     0 section .text *** removed ***
+start ******** end ******** length     0 section .text *** removed ***
+start ******** end ******** length     0 section .text *** removed ***
+start ******** end ******** length     0 section .text *** removed ***
+start ******** end ******** length     0 section .text *** removed ***
+start 0000852b end 00008535 length    10 section .text
+start ******** end ******** length     0 section .text *** removed ***
+start ******** end ******** length     0 section .text *** removed ***
+start ******** end ******** length     0 section .text *** removed ***
+start ******** end ******** length     0 section .text *** removed ***
+start ******** end ******** length     0 section .text *** removed ***
+
+Release\usb.o:
+start 00008535 end 00008d3d length  2056 section .text
+start 00000008 end 00000062 length    90 section .ubsct
+start 000002b3 end 00000328 length   117 section .info.
+start 00008080 end 00008086 length     6 section .const
+
+Release\usb_desc.o:
+start 00000000 end 00000008 length     8 section .bsct
+start 00000328 end 000003a2 length   122 section .info.
+start 00008086 end 000081a8 length   290 section .const
+
+Release\usb_rx.o:
+start 00008d3d end 00008e64 length   295 section .text
+start 000003a2 end 000003d8 length    54 section .info.
+
+Release\usb_tx.o:
+start 00008e64 end 00008f8f length   299 section .text
+start 000003d8 end 0000040e length    54 section .info.
+
+Release\init.o:
+start 00008f8f end 00008ff1 length    98 section .text
+start 0000040e end 00000484 length   118 section .info.
+
+Release\main.o:
+start 00008ff1 end 0000935b length   874 section .text
+start 00000062 end 0000007c length    26 section .ubsct
+start 00000484 end 000004fa length   118 section .info.
+
+Release\peripheral.o:
+start 0000935b end 0000954b length   496 section .text
+start 0000007c end 00000089 length    13 section .ubsct
+start 000004fa end 00000576 length   124 section .info.
+start 000081a8 end 000081c9 length    33 section .const
+
+Release\stm8s_it.o:
+start 0000954b end 00009587 length    60 section .text
+start 00000576 end 000005f0 length   122 section .info.
+
+(C:\Program Files (x86)\COSMIC\FSE_Compilers\CXSTM8\lib\libm0.sm8)lreg.o:
+start ******** end ******** length     0 section .ubsct *** removed ***
+start 000005f0 end 0000061f length    47 section .info.
+
+(C:\Program Files (x86)\COSMIC\FSE_Compilers\CXSTM8\lib\libm0.sm8)ltor.o:
+start ******** end ******** length     0 section .text *** removed ***
+start 0000061f end 0000064e length    47 section .info.
+
+(C:\Program Files (x86)\COSMIC\FSE_Compilers\CXSTM8\lib\libm0.sm8)ludiv.o:
+start ******** end ******** length     0 section .text *** removed ***
+start 0000064e end 0000067e length    48 section .info.
+
+(C:\Program Files (x86)\COSMIC\FSE_Compilers\CXSTM8\lib\libm0.sm8)ldiv.o:
+start ******** end ******** length     0 section .text *** removed ***
+start 0000067e end 000006ad length    47 section .info.
+
+(C:\Program Files (x86)\COSMIC\FSE_Compilers\CXSTM8\lib\libm0.sm8)lgneg.o:
+start ******** end ******** length     0 section .text *** removed ***
+start 000006ad end 000006dd length    48 section .info.
+
+(C:\Program Files (x86)\COSMIC\FSE_Compilers\CXSTM8\lib\libm0.sm8)lneg.o:
+start ******** end ******** length     0 section .text *** removed ***
+start 000006dd end 0000070c length    47 section .info.
+
+(C:\Program Files (x86)\COSMIC\FSE_Compilers\CXSTM8\lib\libm0.sm8)rtol.o:
+start ******** end ******** length     0 section .text *** removed ***
+start 0000070c end 0000073b length    47 section .info.
+
+(C:\Program Files (x86)\COSMIC\FSE_Compilers\CXSTM8\lib\libm0.sm8)xreg.o:
+start 00000089 end 0000008c length     3 section .ubsct
+start 0000073b end 0000076a length    47 section .info.
+
+(C:\Program Files (x86)\COSMIC\FSE_Compilers\CXSTM8\lib\libm0.sm8)yreg.o:
+start 0000008c end 0000008f length     3 section .ubsct
+start 0000076a end 00000799 length    47 section .info.
+
+Release\stm8_interrupt_vector.o:
+start 00000799 end 00000820 length   135 section .info.
+start 00008000 end 00008080 length   128 section .const
+
+
+                             -----------
+                             Stack usage
+                             -----------
+
+Release\init.o:
+_Init_Clock                             2   (2)
+_Init_GPIO                              8   (2)
+_SYSTimer_Init                          7   (2)
+_USB_connect                            7   (2)
+
+Release\main.o:
+_BTN_USB_send_Loop                     22   (5)
+_EVENT_KEY_pressed                      4   (2)
+_EVENT_KEY_released                     4   (2)
+_KEY_changed                            2   (2)
+_USB_Class_DeInit_callback              2   (2)
+_USB_Class_Init_callback                3   (3)
+_USB_EP0_RxReady_callback              13   (4)
+_USB_EP1_RxReady_callback               2   (2)
+_USB_Setup_Request_callback            21   (4)
+_main                              >   27   (2)
+
+Release\peripheral.o:
+_Buttons_init                           9   (3)
+_Buttons_loop                          10   (5)
+_Led_setmode                            9   (4)
+_Leds_init                             12   (3)
+
+Release\stm8s_clk.o:
+_CLK_PeripheralClockConfig              4   (4)
+
+Release\stm8s_gpio.o:
+_GPIO_DeInit                            2   (2)
+_GPIO_Init                              6   (6)
+_GPIO_ReadInputPin                      5   (5)
+_GPIO_WriteHigh                         5   (5)
+_GPIO_WriteLow                          5   (5)
+
+Release\stm8s_it.o:
+f_ADC1_IRQHandler                  >    6   (6)
+f_AWU_IRQHandler                   >    6   (6)
+f_CLK_IRQHandler                   >    6   (6)
+f_EEPROM_EEC_IRQHandler            >    6   (6)
+f_EXTI_PORTA_IRQHandler            >    6   (6)
+f_EXTI_PORTB_IRQHandler            >    6   (6)
+f_EXTI_PORTC_IRQHandler            >    6   (6)
+f_EXTI_PORTD_IRQHandler            >    6   (6)
+f_EXTI_PORTE_IRQHandler            >    6   (6)
+f_I2C_IRQHandler                   >    6   (6)
+f_NonHandledInterrupt              >    6   (6)
+f_SPI_IRQHandler                   >    6   (6)
+f_TIM1_UPD_OVF_TRG_BRK_IRQHandler  >    6   (6)
+f_TIM2_CAP_COM_IRQHandler          >    6   (6)
+f_TIM2_UPD_OVF_BRK_IRQHandler      >   14   (12)
+f_TIM4_UPD_OVF_IRQHandler          >    6   (6)
+f_TLI_IRQHandler                   >    6   (6)
+f_TRAP_IRQHandler                  >    6   (6)
+f_UART1_RX_IRQHandler              >    6   (6)
+f_UART1_TX_IRQHandler              >    6   (6)
+
+Release\stm8s_tim1.o:
+L11_TI4_Config                          6   (6)
+L3_TI1_Config                           6   (6)
+L5_TI2_Config                           6   (6)
+L7_TI3_Config                           6   (6)
+_TIM1_ClearFlag                         4   (4)
+_TIM1_ICInit                           13   (7)
+_TIM1_ITConfig                          4   (4)
+_TIM1_SelectInputTrigger                3   (3)
+_TIM1_SelectSlaveMode                   3   (3)
+_TIM1_SetIC1Prescaler                   3   (3)
+_TIM1_SetIC2Prescaler                   3   (3)
+_TIM1_SetIC3Prescaler                   3   (3)
+_TIM1_SetIC4Prescaler                   3   (3)
+_TIM1_TimeBaseInit                      8   (8)
+
+Release\stm8s_tim2.o:
+_TIM2_ClearFlag                         2   (2)
+_TIM2_Cmd                               2   (2)
+_TIM2_DeInit                            2   (2)
+_TIM2_ITConfig                          4   (4)
+_TIM2_TimeBaseInit                      5   (5)
+
+Release\usb.o:
+_USB_Init                              15   (2)
+_USB_Reset                              4   (2)
+_USB_Send_Data                         17   (8)
+_USB_Send_STALL                         3   (3)
+_USB_loop                              25   (4)
+_usb_calc_crc16                         9   (9)
+_usb_rx_ok                         >    8   (4)
+_usb_send_nack                          4   (4)
+
+Stack size: 41
+
+
+                              ---------
+                              Call tree
+                              ---------
+   1 > _ll_usb_rx: (0)
+
+   2 > _main: (2)
+   3      + _BTN_USB_send_Loop: (5)
+   4      |    + _USB_Send_Data: (8)
+   5      |    |    + _usb_calc_crc16: (9)
+          |    | 
+          | 
+   6      + _Buttons_init: (3)
+   7      |    + _GPIO_Init: (6)
+          | 
+   8      + _Buttons_loop: (5)
+   9      |    + _EVENT_KEY_pressed: (2)
+  10      |    |    + _KEY_changed: (2)
+          |    | 
+  11      |    + _EVENT_KEY_released: (2)
+  12      |    |    + _KEY_changed --> 10
+          |    | 
+  13      |    + _GPIO_ReadInputPin: (5)
+          | 
+  14      + _Init_Clock: (2)
+  15      + _Init_GPIO: (2)
+  16      |    + _GPIO_DeInit: (2)
+  17      |    + _GPIO_Init --> 7
+          | 
+  18      + _Leds_init: (3)
+  19      |    + _GPIO_Init --> 7
+  20      |    + _Led_setmode: (4)
+  21      |    |    + _GPIO_WriteHigh: (5)
+  22      |    |    + _GPIO_WriteLow: (5)
+          |    | 
+          | 
+  23      + _SYSTimer_Init: (2)
+  24      |    + _CLK_PeripheralClockConfig: (4)
+  25      |    + _TIM2_ClearFlag: (2)
+  26      |    + _TIM2_Cmd: (2)
+  27      |    + _TIM2_DeInit: (2)
+  28      |    + _TIM2_ITConfig: (4)
+  29      |    + _TIM2_TimeBaseInit: (5)
+          | 
+  30      + _USB_Init: (2)
+  31      |    + _CLK_PeripheralClockConfig --> 24
+  32      |    + _GPIO_Init --> 7
+  33      |    + _TIM1_ClearFlag: (4)
+  34      |    + _TIM1_ICInit: (7)
+  35      |    |    + L11_TI4_Config: (6)
+  36      |    |    + L3_TI1_Config: (6)
+  37      |    |    + L5_TI2_Config: (6)
+  38      |    |    + L7_TI3_Config: (6)
+  39      |    |    + _TIM1_SetIC1Prescaler: (3)
+  40      |    |    + _TIM1_SetIC2Prescaler: (3)
+  41      |    |    + _TIM1_SetIC3Prescaler: (3)
+  42      |    |    + _TIM1_SetIC4Prescaler: (3)
+          |    | 
+  43      |    + _TIM1_ITConfig: (4)
+  44      |    + _TIM1_SelectInputTrigger: (3)
+  45      |    + _TIM1_SelectSlaveMode: (3)
+  46      |    + _TIM1_TimeBaseInit: (8)
+  47      |    + _USB_Reset: (2)
+  48      |    |    + _USB_Class_DeInit_callback: (2)
+          |    | 
+          | 
+  49      + _USB_connect: (2)
+  50      |    + _GPIO_WriteHigh --> 21
+          | 
+  51      + _USB_loop: (4)
+  52      |    + _USB_Class_DeInit_callback --> 48
+  53      |    + _USB_Class_Init_callback: (3)
+  54      |    + _USB_EP0_RxReady_callback: (4)
+  55      |    |    + _Led_setmode --> 20
+          |    | 
+  56      |    + _USB_EP1_RxReady_callback: (2)
+  57      |    + _USB_Reset --> 47
+  58      |    + _USB_Send_Data --> 4
+  59      |    + _USB_Send_STALL: (3)
+  60      |    + _USB_Setup_Request_callback: (4)
+  61      |    |    + _USB_Send_Data --> 4
+          |    | 
+          | 
+       
+  62 > _usb_rx_ok: (4)
+  63      + _usb_send_nack: (4)
+       
+  64 > f_ADC1_IRQHandler: (6)
+
+  65 > f_AWU_IRQHandler: (6)
+
+  66 > f_CLK_IRQHandler: (6)
+
+  67 > f_EEPROM_EEC_IRQHandler: (6)
+
+  68 > f_EXTI_PORTA_IRQHandler: (6)
+
+  69 > f_EXTI_PORTB_IRQHandler: (6)
+
+  70 > f_EXTI_PORTC_IRQHandler: (6)
+
+  71 > f_EXTI_PORTD_IRQHandler: (6)
+
+  72 > f_EXTI_PORTE_IRQHandler: (6)
+
+  73 > f_I2C_IRQHandler: (6)
+
+  74 > f_NonHandledInterrupt: (6)
+
+  75 > f_SPI_IRQHandler: (6)
+
+  76 > f_TIM1_UPD_OVF_TRG_BRK_IRQHandler: (6)
+
+  77 > f_TIM2_CAP_COM_IRQHandler: (6)
+
+  78 > f_TIM2_UPD_OVF_BRK_IRQHandler: (12)
+  79      + _TIM2_ClearFlag --> 25
+       
+  80 > f_TIM4_UPD_OVF_IRQHandler: (6)
+
+  81 > f_TLI_IRQHandler: (6)
+
+  82 > f_TRAP_IRQHandler: (6)
+
+  83 > f_UART1_RX_IRQHandler: (6)
+
+  84 > f_UART1_TX_IRQHandler: (6)
+
+  85   L11_TI4_Config --> 35
+
+  86   L3_TI1_Config --> 36
+
+  87   L5_TI2_Config --> 37
+
+  88   L7_TI3_Config --> 38
+
+  89   _BTN_USB_send_Loop --> 3
+
+  90   _Buttons_init --> 6
+
+  91   _Buttons_loop --> 8
+
+  92   _CLK_PeripheralClockConfig --> 24
+
+  93   _EVENT_KEY_pressed --> 9
+
+  94   _EVENT_KEY_released --> 11
+
+  95   _GPIO_DeInit --> 16
+
+  96   _GPIO_Init --> 7
+
+  97   _GPIO_ReadInputPin --> 13
+
+  98   _GPIO_WriteHigh --> 21
+
+  99   _GPIO_WriteLow --> 22
+
+ 100   _Init_Clock --> 14
+
+ 101   _Init_GPIO --> 15
+
+ 102   _KEY_changed --> 10
+
+ 103   _Led_setmode --> 20
+
+ 104   _Leds_init --> 18
+
+ 105   _SYSTimer_Init --> 23
+
+ 106   _TIM1_ClearFlag --> 33
+
+ 107   _TIM1_ICInit --> 34
+
+ 108   _TIM1_ITConfig --> 43
+
+ 109   _TIM1_SelectInputTrigger --> 44
+
+ 110   _TIM1_SelectSlaveMode --> 45
+
+ 111   _TIM1_SetIC1Prescaler --> 39
+
+ 112   _TIM1_SetIC2Prescaler --> 40
+
+ 113   _TIM1_SetIC3Prescaler --> 41
+
+ 114   _TIM1_SetIC4Prescaler --> 42
+
+ 115   _TIM1_TimeBaseInit --> 46
+
+ 116   _TIM2_ClearFlag --> 25
+
+ 117   _TIM2_Cmd --> 26
+
+ 118   _TIM2_DeInit --> 27
+
+ 119   _TIM2_ITConfig --> 28
+
+ 120   _TIM2_TimeBaseInit --> 29
+
+ 121   _USB_Class_DeInit_callback --> 48
+
+ 122   _USB_Class_Init_callback --> 53
+
+ 123   _USB_EP0_RxReady_callback --> 54
+
+ 124   _USB_EP1_RxReady_callback --> 56
+
+ 125   _USB_Init --> 30
+
+ 126   _USB_Reset --> 47
+
+ 127   _USB_Send_Data --> 4
+
+ 128   _USB_Send_STALL --> 59
+
+ 129   _USB_Setup_Request_callback --> 60
+
+ 130   _USB_connect --> 49
+
+ 131   _USB_loop --> 51
+
+ 132   _usb_calc_crc16 --> 5
+
+ 133   _usb_send_nack --> 63
+
+
+
+                               -------
+                               Symbols
+                               -------
+
+_BTN_USB_send_Loop                  0000905a   defined in Release\main.o section .text
+_BUTTON_pin                         000081b1   defined in Release\peripheral.o section .const
+_BUTTON_port                        000081b9   defined in Release\peripheral.o section .const
+_Buttons_init                       000093c8   defined in Release\peripheral.o section .text
+                                               used in Release\main.o
+_Buttons_loop                       000093f7   defined in Release\peripheral.o section .text
+                                               used in Release\main.o
+_CLKPrescTable                      ********   *** removed from Release\stm8s_clk.o ***
+_CLK_AdjustHSICalibrationValue      ********   *** removed from Release\stm8s_clk.o ***
+_CLK_CCOCmd                         ********   *** removed from Release\stm8s_clk.o ***
+_CLK_CCOConfig                      ********   *** removed from Release\stm8s_clk.o ***
+_CLK_ClearITPendingBit              ********   *** removed from Release\stm8s_clk.o ***
+_CLK_ClockSecuritySystemEnable      ********   *** removed from Release\stm8s_clk.o ***
+_CLK_ClockSwitchCmd                 ********   *** removed from Release\stm8s_clk.o ***
+_CLK_ClockSwitchConfig              ********   *** removed from Release\stm8s_clk.o ***
+_CLK_DeInit                         ********   *** removed from Release\stm8s_clk.o ***
+_CLK_FastHaltWakeUpCmd              ********   *** removed from Release\stm8s_clk.o ***
+_CLK_GetClockFreq                   ********   *** removed from Release\stm8s_clk.o ***
+_CLK_GetFlagStatus                  ********   *** removed from Release\stm8s_clk.o ***
+_CLK_GetITStatus                    ********   *** removed from Release\stm8s_clk.o ***
+_CLK_GetSYSCLKSource                ********   *** removed from Release\stm8s_clk.o ***
+_CLK_HSECmd                         ********   *** removed from Release\stm8s_clk.o ***
+_CLK_HSICmd                         ********   *** removed from Release\stm8s_clk.o ***
+_CLK_HSIPrescalerConfig             ********   *** removed from Release\stm8s_clk.o ***
+_CLK_ITConfig                       ********   *** removed from Release\stm8s_clk.o ***
+_CLK_LSICmd                         ********   *** removed from Release\stm8s_clk.o ***
+_CLK_PeripheralClockConfig          00008229   defined in Release\stm8s_clk.o section .text
+                                               used in Release\usb.o
+                                                       Release\init.o
+_CLK_SWIMConfig                     ********   *** removed from Release\stm8s_clk.o ***
+_CLK_SYSCLKConfig                   ********   *** removed from Release\stm8s_clk.o ***
+_CLK_SYSCLKEmergencyClear           ********   *** removed from Release\stm8s_clk.o ***
+_CLK_SlowActiveHaltWakeUpCmd        ********   *** removed from Release\stm8s_clk.o ***
+_EVENT_KEY_pressed                  00009054   defined in Release\main.o section .text
+                                               used in Release\peripheral.o
+_EVENT_KEY_released                 00009057   defined in Release\main.o section .text
+                                               used in Release\peripheral.o
+_GPIO_DeInit                        00008283   defined in Release\stm8s_gpio.o section .text
+                                               used in Release\init.o
+_GPIO_ExternalPullUpConfig          ********   *** removed from Release\stm8s_gpio.o ***
+_GPIO_Init                          0000828b   defined in Release\stm8s_gpio.o section .text
+                                               used in Release\usb.o
+                                                       Release\init.o
+                                                       Release\peripheral.o
+_GPIO_ReadInputData                 ********   *** removed from Release\stm8s_gpio.o ***
+_GPIO_ReadInputPin                  000082e7   defined in Release\stm8s_gpio.o section .text
+                                               used in Release\peripheral.o
+_GPIO_ReadOutputData                ********   *** removed from Release\stm8s_gpio.o ***
+_GPIO_Write                         ********   *** removed from Release\stm8s_gpio.o ***
+_GPIO_WriteHigh                     000082dc   defined in Release\stm8s_gpio.o section .text
+                                               used in Release\init.o
+                                                       Release\peripheral.o
+_GPIO_WriteLow                      000082e1   defined in Release\stm8s_gpio.o section .text
+                                               used in Release\peripheral.o
+_GPIO_WriteReverse                  ********   *** removed from Release\stm8s_gpio.o ***
+_HID_Dev                            00000062   defined in Release\main.o section .ubsct
+_HSIDivFactor                       ********   *** removed from Release\stm8s_clk.o ***
+_Init_Clock                         00008fbd   defined in Release\init.o section .text
+                                               used in Release\main.o
+_Init_GPIO                          00008f8f   defined in Release\init.o section .text
+                                               used in Release\main.o
+_KEY_changed                        00009037   defined in Release\main.o section .text
+_LED_pin                            000081a8   defined in Release\peripheral.o section .const
+_LED_port                           000081ab   defined in Release\peripheral.o section .const
+_Led_setmode                        00009384   defined in Release\peripheral.o section .text
+                                               used in Release\main.o
+_Leds_init                          0000935b   defined in Release\peripheral.o section .text
+                                               used in Release\main.o
+_SYSTimer_Init                      00008fcc   defined in Release\init.o section .text
+                                               used in Release\main.o
+_String_LangID                      00008138   defined in Release\usb_desc.o section .const
+_String_Product                     00008162   defined in Release\usb_desc.o section .const
+_String_Serial                      00008192   defined in Release\usb_desc.o section .const
+_String_Vendor                      0000813c   defined in Release\usb_desc.o section .const
+_TIM1_ARRPreloadConfig              ********   *** removed from Release\stm8s_tim1.o ***
+_TIM1_BDTRConfig                    ********   *** removed from Release\stm8s_tim1.o ***
+_TIM1_CCPreloadControl              ********   *** removed from Release\stm8s_tim1.o ***
+_TIM1_CCxCmd                        ********   *** removed from Release\stm8s_tim1.o ***
+_TIM1_CCxNCmd                       ********   *** removed from Release\stm8s_tim1.o ***
+_TIM1_ClearFlag                     000083d1   defined in Release\stm8s_tim1.o section .text
+                                               used in Release\usb.o
+_TIM1_ClearITPendingBit             ********   *** removed from Release\stm8s_tim1.o ***
+_TIM1_Cmd                           ********   *** removed from Release\stm8s_tim1.o ***
+_TIM1_CounterModeConfig             ********   *** removed from Release\stm8s_tim1.o ***
+_TIM1_CtrlPWMOutputs                ********   *** removed from Release\stm8s_tim1.o ***
+_TIM1_DeInit                        ********   *** removed from Release\stm8s_tim1.o ***
+_TIM1_ETRClockMode1Config           ********   *** removed from Release\stm8s_tim1.o ***
+_TIM1_ETRClockMode2Config           ********   *** removed from Release\stm8s_tim1.o ***
+_TIM1_ETRConfig                     ********   *** removed from Release\stm8s_tim1.o ***
+_TIM1_EncoderInterfaceConfig        ********   *** removed from Release\stm8s_tim1.o ***
+_TIM1_ForcedOC1Config               ********   *** removed from Release\stm8s_tim1.o ***
+_TIM1_ForcedOC2Config               ********   *** removed from Release\stm8s_tim1.o ***
+_TIM1_ForcedOC3Config               ********   *** removed from Release\stm8s_tim1.o ***
+_TIM1_ForcedOC4Config               ********   *** removed from Release\stm8s_tim1.o ***
+_TIM1_GenerateEvent                 ********   *** removed from Release\stm8s_tim1.o ***
+_TIM1_GetCapture1                   ********   *** removed from Release\stm8s_tim1.o ***
+_TIM1_GetCapture2                   ********   *** removed from Release\stm8s_tim1.o ***
+_TIM1_GetCapture3                   ********   *** removed from Release\stm8s_tim1.o ***
+_TIM1_GetCapture4                   ********   *** removed from Release\stm8s_tim1.o ***
+_TIM1_GetCounter                    ********   *** removed from Release\stm8s_tim1.o ***
+_TIM1_GetFlagStatus                 ********   *** removed from Release\stm8s_tim1.o ***
+_TIM1_GetITStatus                   ********   *** removed from Release\stm8s_tim1.o ***
+_TIM1_GetPrescaler                  ********   *** removed from Release\stm8s_tim1.o ***
+_TIM1_ICInit                        0000830e   defined in Release\stm8s_tim1.o section .text
+                                               used in Release\usb.o
+_TIM1_ITConfig                      0000836d   defined in Release\stm8s_tim1.o section .text
+                                               used in Release\usb.o
+_TIM1_InternalClockConfig           ********   *** removed from Release\stm8s_tim1.o ***
+_TIM1_OC1FastConfig                 ********   *** removed from Release\stm8s_tim1.o ***
+_TIM1_OC1Init                       ********   *** removed from Release\stm8s_tim1.o ***
+_TIM1_OC1NPolarityConfig            ********   *** removed from Release\stm8s_tim1.o ***
+_TIM1_OC1PolarityConfig             ********   *** removed from Release\stm8s_tim1.o ***
+_TIM1_OC1PreloadConfig              ********   *** removed from Release\stm8s_tim1.o ***
+_TIM1_OC2FastConfig                 ********   *** removed from Release\stm8s_tim1.o ***
+_TIM1_OC2Init                       ********   *** removed from Release\stm8s_tim1.o ***
+_TIM1_OC2NPolarityConfig            ********   *** removed from Release\stm8s_tim1.o ***
+_TIM1_OC2PolarityConfig             ********   *** removed from Release\stm8s_tim1.o ***
+_TIM1_OC2PreloadConfig              ********   *** removed from Release\stm8s_tim1.o ***
+_TIM1_OC3FastConfig                 ********   *** removed from Release\stm8s_tim1.o ***
+_TIM1_OC3Init                       ********   *** removed from Release\stm8s_tim1.o ***
+_TIM1_OC3NPolarityConfig            ********   *** removed from Release\stm8s_tim1.o ***
+_TIM1_OC3PolarityConfig             ********   *** removed from Release\stm8s_tim1.o ***
+_TIM1_OC3PreloadConfig              ********   *** removed from Release\stm8s_tim1.o ***
+_TIM1_OC4FastConfig                 ********   *** removed from Release\stm8s_tim1.o ***
+_TIM1_OC4Init                       ********   *** removed from Release\stm8s_tim1.o ***
+_TIM1_OC4PolarityConfig             ********   *** removed from Release\stm8s_tim1.o ***
+_TIM1_OC4PreloadConfig              ********   *** removed from Release\stm8s_tim1.o ***
+_TIM1_PWMIConfig                    ********   *** removed from Release\stm8s_tim1.o ***
+_TIM1_PrescalerConfig               ********   *** removed from Release\stm8s_tim1.o ***
+_TIM1_SelectCOM                     ********   *** removed from Release\stm8s_tim1.o ***
+_TIM1_SelectHallSensor              ********   *** removed from Release\stm8s_tim1.o ***
+_TIM1_SelectInputTrigger            00008383   defined in Release\stm8s_tim1.o section .text
+                                               used in Release\usb.o
+_TIM1_SelectMasterSlaveMode         ********   *** removed from Release\stm8s_tim1.o ***
+_TIM1_SelectOCxM                    ********   *** removed from Release\stm8s_tim1.o ***
+_TIM1_SelectOnePulseMode            ********   *** removed from Release\stm8s_tim1.o ***
+_TIM1_SelectOutputTrigger           ********   *** removed from Release\stm8s_tim1.o ***
+_TIM1_SelectSlaveMode               00008390   defined in Release\stm8s_tim1.o section .text
+                                               used in Release\usb.o
+_TIM1_SetAutoreload                 ********   *** removed from Release\stm8s_tim1.o ***
+_TIM1_SetCompare1                   ********   *** removed from Release\stm8s_tim1.o ***
+_TIM1_SetCompare2                   ********   *** removed from Release\stm8s_tim1.o ***
+_TIM1_SetCompare3                   ********   *** removed from Release\stm8s_tim1.o ***
+_TIM1_SetCompare4                   ********   *** removed from Release\stm8s_tim1.o ***
+_TIM1_SetCounter                    ********   *** removed from Release\stm8s_tim1.o ***
+_TIM1_SetIC1Prescaler               0000839d   defined in Release\stm8s_tim1.o section .text
+_TIM1_SetIC2Prescaler               000083aa   defined in Release\stm8s_tim1.o section .text
+_TIM1_SetIC3Prescaler               000083b7   defined in Release\stm8s_tim1.o section .text
+_TIM1_SetIC4Prescaler               000083c4   defined in Release\stm8s_tim1.o section .text
+_TIM1_TIxExternalClockConfig        ********   *** removed from Release\stm8s_tim1.o ***
+_TIM1_TimeBaseInit                  000082ec   defined in Release\stm8s_tim1.o section .text
+                                               used in Release\usb.o
+_TIM1_UpdateDisableConfig           ********   *** removed from Release\stm8s_tim1.o ***
+_TIM1_UpdateRequestConfig           ********   *** removed from Release\stm8s_tim1.o ***
+_TIM2_ARRPreloadConfig              ********   *** removed from Release\stm8s_tim2.o ***
+_TIM2_CCxCmd                        ********   *** removed from Release\stm8s_tim2.o ***
+_TIM2_ClearFlag                     0000852b   defined in Release\stm8s_tim2.o section .text
+                                               used in Release\init.o
+                                                       Release\stm8s_it.o
+_TIM2_ClearITPendingBit             ********   *** removed from Release\stm8s_tim2.o ***
+_TIM2_Cmd                           00008508   defined in Release\stm8s_tim2.o section .text
+                                               used in Release\init.o
+_TIM2_DeInit                        000084a1   defined in Release\stm8s_tim2.o section .text
+                                               used in Release\init.o
+_TIM2_ForcedOC1Config               ********   *** removed from Release\stm8s_tim2.o ***
+_TIM2_ForcedOC2Config               ********   *** removed from Release\stm8s_tim2.o ***
+_TIM2_ForcedOC3Config               ********   *** removed from Release\stm8s_tim2.o ***
+_TIM2_GenerateEvent                 ********   *** removed from Release\stm8s_tim2.o ***
+_TIM2_GetCapture1                   ********   *** removed from Release\stm8s_tim2.o ***
+_TIM2_GetCapture2                   ********   *** removed from Release\stm8s_tim2.o ***
+_TIM2_GetCapture3                   ********   *** removed from Release\stm8s_tim2.o ***
+_TIM2_GetCounter                    ********   *** removed from Release\stm8s_tim2.o ***
+_TIM2_GetFlagStatus                 ********   *** removed from Release\stm8s_tim2.o ***
+_TIM2_GetITStatus                   ********   *** removed from Release\stm8s_tim2.o ***
+_TIM2_GetPrescaler                  ********   *** removed from Release\stm8s_tim2.o ***
+_TIM2_ICInit                        ********   *** removed from Release\stm8s_tim2.o ***
+_TIM2_ITConfig                      00008515   defined in Release\stm8s_tim2.o section .text
+                                               used in Release\init.o
+_TIM2_OC1Init                       ********   *** removed from Release\stm8s_tim2.o ***
+_TIM2_OC1PolarityConfig             ********   *** removed from Release\stm8s_tim2.o ***
+_TIM2_OC1PreloadConfig              ********   *** removed from Release\stm8s_tim2.o ***
+_TIM2_OC2Init                       ********   *** removed from Release\stm8s_tim2.o ***
+_TIM2_OC2PolarityConfig             ********   *** removed from Release\stm8s_tim2.o ***
+_TIM2_OC2PreloadConfig              ********   *** removed from Release\stm8s_tim2.o ***
+_TIM2_OC3Init                       ********   *** removed from Release\stm8s_tim2.o ***
+_TIM2_OC3PolarityConfig             ********   *** removed from Release\stm8s_tim2.o ***
+_TIM2_OC3PreloadConfig              ********   *** removed from Release\stm8s_tim2.o ***
+_TIM2_PWMIConfig                    ********   *** removed from Release\stm8s_tim2.o ***
+_TIM2_PrescalerConfig               ********   *** removed from Release\stm8s_tim2.o ***
+_TIM2_SelectOCxM                    ********   *** removed from Release\stm8s_tim2.o ***
+_TIM2_SelectOnePulseMode            ********   *** removed from Release\stm8s_tim2.o ***
+_TIM2_SetAutoreload                 ********   *** removed from Release\stm8s_tim2.o ***
+_TIM2_SetCompare1                   ********   *** removed from Release\stm8s_tim2.o ***
+_TIM2_SetCompare2                   ********   *** removed from Release\stm8s_tim2.o ***
+_TIM2_SetCompare3                   ********   *** removed from Release\stm8s_tim2.o ***
+_TIM2_SetCounter                    ********   *** removed from Release\stm8s_tim2.o ***
+_TIM2_SetIC1Prescaler               ********   *** removed from Release\stm8s_tim2.o ***
+_TIM2_SetIC2Prescaler               ********   *** removed from Release\stm8s_tim2.o ***
+_TIM2_SetIC3Prescaler               ********   *** removed from Release\stm8s_tim2.o ***
+_TIM2_TimeBaseInit                  000084fa   defined in Release\stm8s_tim2.o section .text
+                                               used in Release\init.o
+_TIM2_UpdateDisableConfig           ********   *** removed from Release\stm8s_tim2.o ***
+_TIM2_UpdateRequestConfig           ********   *** removed from Release\stm8s_tim2.o ***
+_USB_Class_DeInit_callback          000091b0   defined in Release\main.o section .text
+                                               used in Release\usb.o
+_USB_Class_Init_callback            00009183   defined in Release\main.o section .text
+                                               used in Release\usb.o
+_USB_EP0_RxReady_callback           00008ff1   defined in Release\main.o section .text
+                                               used in Release\usb.o
+_USB_EP1_RxReady_callback           00009332   defined in Release\main.o section .text
+                                               used in Release\usb.o
+_USB_HID_descriptor                 000080ba   defined in Release\usb_desc.o section .const
+                                               used in Release\main.o
+_USB_Init                           00008560   defined in Release\usb.o section .text
+                                               used in Release\main.o
+_USB_Reset                          00008535   defined in Release\usb.o section .text
+_USB_Send_Data                      0000884c   defined in Release\usb.o section .text
+                                               used in Release\main.o
+_USB_Send_STALL                     000089f5   defined in Release\usb.o section .text
+_USB_Setup_Request_callback         000091b2   defined in Release\main.o section .text
+                                               used in Release\usb.o
+_USB_String_Descriptors             00000000   defined in Release\usb_desc.o section .bsct, initialized
+                                               used in Release\usb.o
+_USB_String_Descriptors_Length      000081a4   defined in Release\usb_desc.o section .const
+                                               used in Release\usb.o
+_USB_connect                        00008fb3   defined in Release\init.o section .text
+                                               used in Release\main.o
+_USB_loop                           00008a1e   defined in Release\usb.o section .text
+                                               used in Release\main.o
+__endmem                            000001ff   defined in command file
+                                               *** not used ***
+__endzp                             0000008f   defined in command file section .ubsct
+                                               used in C:\Program Files (x86)\COSMIC\FSE_Compilers\CXSTM8\lib\crtsi0.sm8
+__idesc__                           000081c9   defined in linker section .init
+                                               used in C:\Program Files (x86)\COSMIC\FSE_Compilers\CXSTM8\lib\crtsi0.sm8
+__memory                            00000100   defined in command file section .bss
+                                               used in C:\Program Files (x86)\COSMIC\FSE_Compilers\CXSTM8\lib\crtsi0.sm8
+__stack                             000003ff   defined in command file
+                                               used in C:\Program Files (x86)\COSMIC\FSE_Compilers\CXSTM8\lib\crtsi0.sm8
+__startmem                          00000100   defined in command file section .bss
+                                               *** not used ***
+__stext                             000081d9   defined in C:\Program Files (x86)\COSMIC\FSE_Compilers\CXSTM8\lib\crtsi0.sm8 section .text
+                                               used in Release\stm8_interrupt_vector.o
+__vectab                            00008000   defined in Release\stm8_interrupt_vector.o section .const
+                                               *** not used ***
+_exit                               00008227   defined in C:\Program Files (x86)\COSMIC\FSE_Compilers\CXSTM8\lib\crtsi0.sm8 section .text
+_g_LEDS_mode                        0000007c   defined in Release\peripheral.o section .ubsct
+_g_buttons                          0000007f   defined in Release\peripheral.o section .ubsct
+                                               used in Release\main.o
+_g_systimer_flag                    0000007b   defined in Release\main.o section .ubsct
+                                               used in Release\stm8s_it.o
+_ll_usb_rx                          00008e0f   defined in Release\usb_rx.o section .text
+                                               used in Release\stm8_interrupt_vector.o
+_ll_usb_rx_buffer                   00000052   defined in Release\usb.o section .ubsct
+                                               used in Release\usb_rx.o
+_ll_usb_rx_count                    0000004e   defined in Release\usb.o section .ubsct
+                                               used in Release\usb_rx.o
+_ll_usb_tx                          00008f81   defined in Release\usb_tx.o section .text
+                                               used in Release\usb.o
+_ll_usb_tx_buffer_pointer           00000050   defined in Release\usb.o section .ubsct
+                                               used in Release\usb_tx.o
+_ll_usb_tx_count                    0000004f   defined in Release\usb.o section .ubsct
+                                               used in Release\usb_tx.o
+_main                               00009333   defined in Release\main.o section .text
+                                               used in C:\Program Files (x86)\COSMIC\FSE_Compilers\CXSTM8\lib\crtsi0.sm8
+_usb                                00000008   defined in Release\usb.o section .ubsct
+_usb_calc_crc16                     000087df   defined in Release\usb.o section .text
+_usb_configuration_descriptor       00008098   defined in Release\usb_desc.o section .const
+                                               used in Release\usb.o
+_usb_device_descriptor              00008086   defined in Release\usb_desc.o section .const
+                                               used in Release\usb.o
+_usb_report_descriptor              000080c3   defined in Release\usb_desc.o section .const
+                                               used in Release\main.o
+_usb_rx_ok                          000085f6   defined in Release\usb.o section .text
+                                               used in Release\usb_rx.o
+_usb_send_nack                      000085ac   defined in Release\usb.o section .text
+c_divsl                             ********   *** removed from (C:\Program Files (x86)\COSMIC\FSE_Compilers\CXSTM8\lib\libm0.sm8)ldiv.o ***
+c_divul                             ********   *** removed from (C:\Program Files (x86)\COSMIC\FSE_Compilers\CXSTM8\lib\libm0.sm8)ldiv.o ***
+c_lgneg                             ********   *** removed from (C:\Program Files (x86)\COSMIC\FSE_Compilers\CXSTM8\lib\libm0.sm8)lgneg.o ***
+c_lneg                              ********   *** removed from (C:\Program Files (x86)\COSMIC\FSE_Compilers\CXSTM8\lib\libm0.sm8)lneg.o ***
+c_lreg                              ********   *** removed from (C:\Program Files (x86)\COSMIC\FSE_Compilers\CXSTM8\lib\libm0.sm8)lreg.o ***
+c_ltor                              ********   *** removed from (C:\Program Files (x86)\COSMIC\FSE_Compilers\CXSTM8\lib\libm0.sm8)ltor.o ***
+c_ludv                              ********   *** removed from (C:\Program Files (x86)\COSMIC\FSE_Compilers\CXSTM8\lib\libm0.sm8)ludiv.o ***
+c_rtol                              ********   *** removed from (C:\Program Files (x86)\COSMIC\FSE_Compilers\CXSTM8\lib\libm0.sm8)rtol.o ***
+c_x                                 00000089   defined in (C:\Program Files (x86)\COSMIC\FSE_Compilers\CXSTM8\lib\libm0.sm8)xreg.o section .ubsct
+                                               used in C:\Program Files (x86)\COSMIC\FSE_Compilers\CXSTM8\lib\crtsi0.sm8
+                                                       Release\usb.o
+                                                       Release\stm8s_it.o
+                                                       (C:\Program Files (x86)\COSMIC\FSE_Compilers\CXSTM8\lib\libm0.sm8)ldiv.o
+c_y                                 0000008c   defined in (C:\Program Files (x86)\COSMIC\FSE_Compilers\CXSTM8\lib\libm0.sm8)yreg.o section .ubsct
+                                               used in C:\Program Files (x86)\COSMIC\FSE_Compilers\CXSTM8\lib\crtsi0.sm8
+                                                       Release\stm8s_it.o
+f_ADC1_IRQHandler                   00009584   defined in Release\stm8s_it.o section .text
+                                               used in Release\stm8_interrupt_vector.o
+f_AWU_IRQHandler                    0000954e   defined in Release\stm8s_it.o section .text
+                                               used in Release\stm8_interrupt_vector.o
+f_CLK_IRQHandler                    0000954f   defined in Release\stm8s_it.o section .text
+                                               used in Release\stm8_interrupt_vector.o
+f_EEPROM_EEC_IRQHandler             00009586   defined in Release\stm8s_it.o section .text
+                                               used in Release\stm8_interrupt_vector.o
+f_EXTI_PORTA_IRQHandler             00009550   defined in Release\stm8s_it.o section .text
+                                               used in Release\stm8_interrupt_vector.o
+f_EXTI_PORTB_IRQHandler             00009551   defined in Release\stm8s_it.o section .text
+                                               used in Release\stm8_interrupt_vector.o
+f_EXTI_PORTC_IRQHandler             00009552   defined in Release\stm8s_it.o section .text
+                                               used in Release\stm8_interrupt_vector.o
+f_EXTI_PORTD_IRQHandler             00009553   defined in Release\stm8s_it.o section .text
+                                               used in Release\stm8_interrupt_vector.o
+f_EXTI_PORTE_IRQHandler             00009554   defined in Release\stm8s_it.o section .text
+                                               used in Release\stm8_interrupt_vector.o
+f_I2C_IRQHandler                    00009583   defined in Release\stm8s_it.o section .text
+                                               used in Release\stm8_interrupt_vector.o
+f_NonHandledInterrupt               0000954b   defined in Release\stm8s_it.o section .text
+                                               used in Release\stm8_interrupt_vector.o
+f_SPI_IRQHandler                    00009555   defined in Release\stm8s_it.o section .text
+                                               used in Release\stm8_interrupt_vector.o
+f_TIM1_UPD_OVF_TRG_BRK_IRQHandler   00009556   defined in Release\stm8s_it.o section .text
+                                               used in Release\stm8_interrupt_vector.o
+f_TIM2_CAP_COM_IRQHandler           00009580   defined in Release\stm8s_it.o section .text
+                                               used in Release\stm8_interrupt_vector.o
+f_TIM2_UPD_OVF_BRK_IRQHandler       00009557   defined in Release\stm8s_it.o section .text
+                                               used in Release\stm8_interrupt_vector.o
+f_TIM4_UPD_OVF_IRQHandler           00009585   defined in Release\stm8s_it.o section .text
+                                               used in Release\stm8_interrupt_vector.o
+f_TLI_IRQHandler                    0000954d   defined in Release\stm8s_it.o section .text
+                                               used in Release\stm8_interrupt_vector.o
+f_TRAP_IRQHandler                   0000954c   defined in Release\stm8s_it.o section .text
+                                               used in Release\stm8_interrupt_vector.o
+f_UART1_RX_IRQHandler               00009582   defined in Release\stm8s_it.o section .text
+                                               used in Release\stm8_interrupt_vector.o
+f_UART1_TX_IRQHandler               00009581   defined in Release\stm8s_it.o section .text
+                                               used in Release\stm8_interrupt_vector.o
