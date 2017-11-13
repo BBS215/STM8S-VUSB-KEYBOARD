@@ -4,17 +4,17 @@
 #include "usb_desc.h"
 
 /// SETTINGS ///////////////////////////////////////////////
-#define USB_MAX_NUM_CONFIGURATION 	1
-#define USB_MAX_NUM_INTERFACES 			1
-#define USB_SELF_POWERED						0
-#define USB_CLOCK_HSI								1		// 0 - HSE XTAL 16 MHz; 1 - HSI
-#define USB_CONNECT_TIMEOUT					700 // 100Hz * 7 sec
-#define USB_RECONNECT_DELAY					100 // 100Hz * 1 sec
-#define USB_CONNECT_PORT						GPIOA
-#define USB_CONNECT_PIN							GPIO_PIN_3
-#define EEPROM_START_ADDR						0x4000
-#define MAGIC_VAL										0x11
-#define USB_RESET_DELAY							3000	// 5-7ms
+#define USB_MAX_NUM_CONFIGURATION 	1 // максимальное кол-во конфигураций устройства
+#define USB_MAX_NUM_INTERFACES 			1 // максимальное кол-во интерфейсов устройства
+#define USB_SELF_POWERED						0 // 0 - питание устройства от USB, 1 - собственный источник питания
+#define USB_CLOCK_HSI								1	// 0 - тактирование от внешнего кварца на 16 MHz (PA1, PA2); 1 - от внутреннего RC генератора (HSI)
+#define USB_CONNECT_TIMEOUT					700 // макс. время от момента подключения до момента инициализации драйвером // 100Hz * 7 sec = 700
+#define USB_RECONNECT_DELAY					100 // задержка между отключением и подключением // 100Hz * 1 sec = 100
+#define USB_CONNECT_PORT						GPIOA // порт, на котором висит подтяжка 1K5
+#define USB_CONNECT_PIN							GPIO_PIN_3 // пин, на котором висит подтяжка 1K5
+#define EEPROM_START_ADDR						0x4000 // адрес EEPROM, по которому записывается флаг настройки HSI и значение HSITRIM (2 байта)
+#define MAGIC_VAL										0x11 // флаг настройки HSI. Если в EEPROM записано другое значение - настройка HSI начинается с нуля.
+#define USB_RESET_DELAY							3000	// время для определения события "USB RESET" // 5-7ms
 ////////////////////////////////////////////////////////////
 
 #ifndef NULL

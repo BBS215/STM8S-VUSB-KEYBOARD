@@ -1,6 +1,6 @@
 #include "usb.h"
 
-#define BIT(NUMBER)						(1UL << (NUMBER))
+#define BIT(NUMBER)						(1 << (NUMBER))
 
 uint8_t ll_usb_rx_buffer[16];
 uint8_t* ll_usb_tx_buffer_pointer;
