@@ -48,7 +48,7 @@
   64  0028 00            	dc.b	0
   65  0029 01            	dc.b	1
   66  002a 22            	dc.b	34
-  67  002b 75            	dc.b	117
+  67  002b 95            	dc.b	149
   68  002c 00            	dc.b	0
   69  002d 07            	dc.b	7
   70  002e 05            	dc.b	5
@@ -65,7 +65,7 @@
   81  0038 00            	dc.b	0
   82  0039 01            	dc.b	1
   83  003a 22            	dc.b	34
-  84  003b 75            	dc.b	117
+  84  003b 95            	dc.b	149
   85  003c 00            	dc.b	0
   86  003d               _usb_report_descriptor:
   87  003d 05            	dc.b	5
@@ -184,139 +184,171 @@
  200  00ae 8d            	dc.b	141
  201  00af 81            	dc.b	129
  202  00b0 00            	dc.b	0
- 203  00b1 c0            	dc.b	192
- 204  00b2               _String_LangID:
- 205  00b2 04            	dc.b	4
- 206  00b3 03            	dc.b	3
- 207  00b4 09            	dc.b	9
- 208  00b5 04            	dc.b	4
- 209  00b6               _String_Vendor:
- 210  00b6 26            	dc.b	38
- 211  00b7 03            	dc.b	3
- 212  00b8 53            	dc.b	83
- 213  00b9 00            	dc.b	0
- 214  00ba 54            	dc.b	84
- 215  00bb 00            	dc.b	0
- 216  00bc 4d            	dc.b	77
- 217  00bd 00            	dc.b	0
- 218  00be 69            	dc.b	105
- 219  00bf 00            	dc.b	0
- 220  00c0 63            	dc.b	99
- 221  00c1 00            	dc.b	0
- 222  00c2 72            	dc.b	114
- 223  00c3 00            	dc.b	0
- 224  00c4 6f            	dc.b	111
- 225  00c5 00            	dc.b	0
- 226  00c6 65            	dc.b	101
- 227  00c7 00            	dc.b	0
- 228  00c8 6c            	dc.b	108
- 229  00c9 00            	dc.b	0
- 230  00ca 65            	dc.b	101
- 231  00cb 00            	dc.b	0
- 232  00cc 63            	dc.b	99
- 233  00cd 00            	dc.b	0
- 234  00ce 74            	dc.b	116
- 235  00cf 00            	dc.b	0
- 236  00d0 72            	dc.b	114
- 237  00d1 00            	dc.b	0
- 238  00d2 6f            	dc.b	111
- 239  00d3 00            	dc.b	0
- 240  00d4 6e            	dc.b	110
- 241  00d5 00            	dc.b	0
- 242  00d6 69            	dc.b	105
- 243  00d7 00            	dc.b	0
- 244  00d8 63            	dc.b	99
+ 203  00b1 06            	dc.b	6
+ 204  00b2 00            	dc.b	0
+ 205  00b3 ff            	dc.b	255
+ 206  00b4 09            	dc.b	9
+ 207  00b5 01            	dc.b	1
+ 208  00b6 85            	dc.b	133
+ 209  00b7 03            	dc.b	3
+ 210  00b8 15            	dc.b	21
+ 211  00b9 00            	dc.b	0
+ 212  00ba 26            	dc.b	38
+ 213  00bb ff            	dc.b	255
+ 214  00bc 00            	dc.b	0
+ 215  00bd 75            	dc.b	117
+ 216  00be 08            	dc.b	8
+ 217  00bf 95            	dc.b	149
+ 218  00c0 05            	dc.b	5
+ 219  00c1 91            	dc.b	145
+ 220  00c2 82            	dc.b	130
+ 221  00c3 09            	dc.b	9
+ 222  00c4 02            	dc.b	2
+ 223  00c5 85            	dc.b	133
+ 224  00c6 04            	dc.b	4
+ 225  00c7 95            	dc.b	149
+ 226  00c8 01            	dc.b	1
+ 227  00c9 91            	dc.b	145
+ 228  00ca 82            	dc.b	130
+ 229  00cb 09            	dc.b	9
+ 230  00cc 02            	dc.b	2
+ 231  00cd 95            	dc.b	149
+ 232  00ce 05            	dc.b	5
+ 233  00cf 81            	dc.b	129
+ 234  00d0 00            	dc.b	0
+ 235  00d1 c0            	dc.b	192
+ 236  00d2               _String_LangID:
+ 237  00d2 04            	dc.b	4
+ 238  00d3 03            	dc.b	3
+ 239  00d4 09            	dc.b	9
+ 240  00d5 04            	dc.b	4
+ 241  00d6               _String_Vendor:
+ 242  00d6 26            	dc.b	38
+ 243  00d7 03            	dc.b	3
+ 244  00d8 53            	dc.b	83
  245  00d9 00            	dc.b	0
- 246  00da 73            	dc.b	115
+ 246  00da 54            	dc.b	84
  247  00db 00            	dc.b	0
- 248  00dc               _String_Product:
- 249  00dc 30            	dc.b	48
- 250  00dd 03            	dc.b	3
- 251  00de 53            	dc.b	83
- 252  00df 00            	dc.b	0
- 253  00e0 54            	dc.b	84
- 254  00e1 00            	dc.b	0
- 255  00e2 4d            	dc.b	77
- 256  00e3 00            	dc.b	0
- 257  00e4 38            	dc.b	56
- 258  00e5 00            	dc.b	0
- 259  00e6 20            	dc.b	32
- 260  00e7 00            	dc.b	0
- 261  00e8 56            	dc.b	86
- 262  00e9 00            	dc.b	0
- 263  00ea 55            	dc.b	85
- 264  00eb 00            	dc.b	0
- 265  00ec 53            	dc.b	83
- 266  00ed 00            	dc.b	0
- 267  00ee 42            	dc.b	66
- 268  00ef 00            	dc.b	0
- 269  00f0 20            	dc.b	32
- 270  00f1 00            	dc.b	0
- 271  00f2 48            	dc.b	72
- 272  00f3 00            	dc.b	0
- 273  00f4 49            	dc.b	73
- 274  00f5 00            	dc.b	0
- 275  00f6 44            	dc.b	68
- 276  00f7 00            	dc.b	0
- 277  00f8 20            	dc.b	32
- 278  00f9 00            	dc.b	0
- 279  00fa 64            	dc.b	100
- 280  00fb 00            	dc.b	0
- 281  00fc 65            	dc.b	101
- 282  00fd 00            	dc.b	0
- 283  00fe 6d            	dc.b	109
+ 248  00dc 4d            	dc.b	77
+ 249  00dd 00            	dc.b	0
+ 250  00de 69            	dc.b	105
+ 251  00df 00            	dc.b	0
+ 252  00e0 63            	dc.b	99
+ 253  00e1 00            	dc.b	0
+ 254  00e2 72            	dc.b	114
+ 255  00e3 00            	dc.b	0
+ 256  00e4 6f            	dc.b	111
+ 257  00e5 00            	dc.b	0
+ 258  00e6 65            	dc.b	101
+ 259  00e7 00            	dc.b	0
+ 260  00e8 6c            	dc.b	108
+ 261  00e9 00            	dc.b	0
+ 262  00ea 65            	dc.b	101
+ 263  00eb 00            	dc.b	0
+ 264  00ec 63            	dc.b	99
+ 265  00ed 00            	dc.b	0
+ 266  00ee 74            	dc.b	116
+ 267  00ef 00            	dc.b	0
+ 268  00f0 72            	dc.b	114
+ 269  00f1 00            	dc.b	0
+ 270  00f2 6f            	dc.b	111
+ 271  00f3 00            	dc.b	0
+ 272  00f4 6e            	dc.b	110
+ 273  00f5 00            	dc.b	0
+ 274  00f6 69            	dc.b	105
+ 275  00f7 00            	dc.b	0
+ 276  00f8 63            	dc.b	99
+ 277  00f9 00            	dc.b	0
+ 278  00fa 73            	dc.b	115
+ 279  00fb 00            	dc.b	0
+ 280  00fc               _String_Product:
+ 281  00fc 30            	dc.b	48
+ 282  00fd 03            	dc.b	3
+ 283  00fe 53            	dc.b	83
  284  00ff 00            	dc.b	0
- 285  0100 6f            	dc.b	111
+ 285  0100 54            	dc.b	84
  286  0101 00            	dc.b	0
- 287  0102 20            	dc.b	32
+ 287  0102 4d            	dc.b	77
  288  0103 00            	dc.b	0
- 289  0104 6b            	dc.b	107
+ 289  0104 38            	dc.b	56
  290  0105 00            	dc.b	0
- 291  0106 69            	dc.b	105
+ 291  0106 20            	dc.b	32
  292  0107 00            	dc.b	0
- 293  0108 74            	dc.b	116
+ 293  0108 56            	dc.b	86
  294  0109 00            	dc.b	0
- 295  010a 20            	dc.b	32
+ 295  010a 55            	dc.b	85
  296  010b 00            	dc.b	0
- 297  010c               _String_Serial:
- 298  010c 12            	dc.b	18
- 299  010d 03            	dc.b	3
- 300  010e 30            	dc.b	48
- 301  010f 00            	dc.b	0
- 302  0110 30            	dc.b	48
- 303  0111 00            	dc.b	0
- 304  0112 30            	dc.b	48
- 305  0113 00            	dc.b	0
- 306  0114 30            	dc.b	48
- 307  0115 00            	dc.b	0
- 308  0116 30            	dc.b	48
- 309  0117 00            	dc.b	0
- 310  0118 30            	dc.b	48
- 311  0119 00            	dc.b	0
- 312  011a 30            	dc.b	48
- 313  011b 00            	dc.b	0
- 314  011c 31            	dc.b	49
- 315  011d 00            	dc.b	0
- 316                     	bsct
- 317  0000               _USB_String_Descriptors:
- 318  0000 00b2          	dc.w	_String_LangID
- 319  0002 00b6          	dc.w	_String_Vendor
- 320  0004 00dc          	dc.w	_String_Product
- 321  0006 010c          	dc.w	_String_Serial
- 322                     	switch	.const
- 323  011e               _USB_String_Descriptors_Length:
- 324  011e 04            	dc.b	4
- 325  011f 26            	dc.b	38
- 326  0120 30            	dc.b	48
- 327  0121 12            	dc.b	18
- 454                     	xdef	_String_Serial
- 455                     	xdef	_String_Product
- 456                     	xdef	_String_Vendor
- 457                     	xdef	_String_LangID
- 458                     	xdef	_USB_String_Descriptors_Length
- 459                     	xdef	_USB_String_Descriptors
- 460                     	xdef	_USB_HID_descriptor
- 461                     	xdef	_usb_report_descriptor
- 462                     	xdef	_usb_configuration_descriptor
- 463                     	xdef	_usb_device_descriptor
- 482                     	end
+ 297  010c 53            	dc.b	83
+ 298  010d 00            	dc.b	0
+ 299  010e 42            	dc.b	66
+ 300  010f 00            	dc.b	0
+ 301  0110 20            	dc.b	32
+ 302  0111 00            	dc.b	0
+ 303  0112 48            	dc.b	72
+ 304  0113 00            	dc.b	0
+ 305  0114 49            	dc.b	73
+ 306  0115 00            	dc.b	0
+ 307  0116 44            	dc.b	68
+ 308  0117 00            	dc.b	0
+ 309  0118 20            	dc.b	32
+ 310  0119 00            	dc.b	0
+ 311  011a 64            	dc.b	100
+ 312  011b 00            	dc.b	0
+ 313  011c 65            	dc.b	101
+ 314  011d 00            	dc.b	0
+ 315  011e 6d            	dc.b	109
+ 316  011f 00            	dc.b	0
+ 317  0120 6f            	dc.b	111
+ 318  0121 00            	dc.b	0
+ 319  0122 20            	dc.b	32
+ 320  0123 00            	dc.b	0
+ 321  0124 6b            	dc.b	107
+ 322  0125 00            	dc.b	0
+ 323  0126 69            	dc.b	105
+ 324  0127 00            	dc.b	0
+ 325  0128 74            	dc.b	116
+ 326  0129 00            	dc.b	0
+ 327  012a 20            	dc.b	32
+ 328  012b 00            	dc.b	0
+ 329  012c               _String_Serial:
+ 330  012c 12            	dc.b	18
+ 331  012d 03            	dc.b	3
+ 332  012e 30            	dc.b	48
+ 333  012f 00            	dc.b	0
+ 334  0130 30            	dc.b	48
+ 335  0131 00            	dc.b	0
+ 336  0132 30            	dc.b	48
+ 337  0133 00            	dc.b	0
+ 338  0134 30            	dc.b	48
+ 339  0135 00            	dc.b	0
+ 340  0136 30            	dc.b	48
+ 341  0137 00            	dc.b	0
+ 342  0138 30            	dc.b	48
+ 343  0139 00            	dc.b	0
+ 344  013a 30            	dc.b	48
+ 345  013b 00            	dc.b	0
+ 346  013c 31            	dc.b	49
+ 347  013d 00            	dc.b	0
+ 348                     	bsct
+ 349  0000               _USB_String_Descriptors:
+ 350  0000 00d2          	dc.w	_String_LangID
+ 351  0002 00d6          	dc.w	_String_Vendor
+ 352  0004 00fc          	dc.w	_String_Product
+ 353  0006 012c          	dc.w	_String_Serial
+ 354                     	switch	.const
+ 355  013e               _USB_String_Descriptors_Length:
+ 356  013e 04            	dc.b	4
+ 357  013f 26            	dc.b	38
+ 358  0140 30            	dc.b	48
+ 359  0141 12            	dc.b	18
+ 486                     	xdef	_String_Serial
+ 487                     	xdef	_String_Product
+ 488                     	xdef	_String_Vendor
+ 489                     	xdef	_String_LangID
+ 490                     	xdef	_USB_String_Descriptors_Length
+ 491                     	xdef	_USB_String_Descriptors
+ 492                     	xdef	_USB_HID_descriptor
+ 493                     	xdef	_usb_report_descriptor
+ 494                     	xdef	_usb_configuration_descriptor
+ 495                     	xdef	_usb_device_descriptor
+ 514                     	end

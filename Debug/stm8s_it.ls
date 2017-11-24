@@ -75,7 +75,7 @@
  399  0000               f_TIM1_UPD_OVF_TRG_BRK_IRQHandler:
  403                     ; 232 }
  406  0000 80            	iret	
- 431                     ; 278  INTERRUPT_HANDLER(TIM2_UPD_OVF_BRK_IRQHandler, 13)
+ 431                     ; 278 INTERRUPT_HANDLER(TIM2_UPD_OVF_BRK_IRQHandler, 13)
  431                     ; 279  {
  432                     .text:	section	.text,new
  433  0000               f_TIM2_UPD_OVF_BRK_IRQHandler:
@@ -90,8 +90,8 @@
  443  000c 3b0002        	push	c_y+2
  444  000f be00          	ldw	x,c_y
  445  0011 89            	pushw	x
- 448                     ; 280 		g_systimer_flag = 1;
- 450  0012 35010000      	mov	_g_systimer_flag,#1
+ 448                     ; 280 		g_systimer_400Hz_flag = 1;
+ 450  0012 35010000      	mov	_g_systimer_400Hz_flag,#1
  451                     ; 281 		TIM2_ClearFlag(TIM2_FLAG_UPDATE);
  453  0016 ae0001        	ldw	x,#1
  454  0019 cd0000        	call	_TIM2_ClearFlag
@@ -145,7 +145,7 @@
  680  0000               f_EEPROM_EEC_IRQHandler:
  684                     ; 505 }
  687  0000 80            	iret	
- 699                     	xref.b	_g_systimer_flag
+ 699                     	xref.b	_g_systimer_400Hz_flag
  700                     	xdef	f_EEPROM_EEC_IRQHandler
  701                     	xdef	f_TIM4_UPD_OVF_IRQHandler
  702                     	xdef	f_ADC1_IRQHandler
