@@ -14,7 +14,10 @@
 #define USB_CONNECT_PIN							GPIO_PIN_3 // пин, на котором висит подтяжка 1K5
 #define EEPROM_START_ADDR						0x4000 // адрес EEPROM, по которому записывается флаг настройки HSI и значение HSITRIM (2 байта)
 #define MAGIC_VAL										0x11 // флаг настройки HSI. Если в EEPROM записано другое значение - настройка HSI начинается с нуля.
-#define USB_RESET_DELAY							3000	// время для определения события "USB RESET" // 5-7ms
+#define USB_RESET_DELAY							2000	// время для определения события "USB RESET" // 5-7ms
+#define USB_EP_WATCHDOG_ENABLE			1 // переподключение USB при отсутствии опроса EP
+#define USB_EP_WATCHDOG_TIMEOUT			300 // таймаут опроса // 3 sec
+#define USB_EP_WATCHDOG_RECONNECT_DELAY	100 // задержка между отключением и подключением // 100Hz * 1 sec = 100
 ////////////////////////////////////////////////////////////
 
 #ifndef NULL
@@ -145,9 +148,13 @@ struct usb_type
 	uint16_t delay_counter;
 	uint8_t HSI_Trim_val;
 #endif
+#if (USB_EP_WATCHDOG_ENABLE == 1)
+	int16_t WDG_EP_timeout;
+#endif
 };
 
 /// FUNCS
+//void USB_NRZI_RX_Decode(uint8_t *p_data, uint8_t length); // TEST
 
 void USB_Init(void);
 void USB_loop(void);
@@ -155,8 +162,8 @@ void USB_connect(void);
 void USB_disconnect(void);
 void USB_slow_loop(void);
 int8_t USB_Send_Data(uint8_t * buffer, uint8_t length, uint8_t EP_num);
-void USB_EP0_RxReady_callback(uint8_t *p_data);
-void USB_EP1_RxReady_callback(uint8_t *p_data);
+void USB_EP0_RxReady_callback(uint8_t *p_data, uint8_t length);
+void USB_EP1_RxReady_callback(uint8_t *p_data, uint8_t length);
 int8_t USB_Setup_Request_callback(t_USB_SetupReq *p_req);
 int8_t USB_Class_Init_callback(uint8_t dev_config);
 int8_t USB_Class_DeInit_callback(void);

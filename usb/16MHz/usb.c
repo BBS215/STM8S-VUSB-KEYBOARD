@@ -1,6 +1,6 @@
 #include "usb.h"
 
-#define BIT(NUMBER)						(1UL << (NUMBER))
+#define BIT(NUMBER)						(1 << (NUMBER))
 
 uint8_t ll_usb_rx_buffer[16];
 uint8_t* ll_usb_tx_buffer_pointer;
@@ -51,6 +51,9 @@ void USB_Init(void)
 	GPIO_Init(USB_CONNECT_PORT, USB_CONNECT_PIN, GPIO_MODE_OUT_PP_LOW_SLOW); // USB_CONNECT
 	//GPIO_Init(GPIOD, GPIO_PIN_2, GPIO_MODE_OUT_PP_LOW_FAST); // DEBUG
 	usb.dev_state = USB_STATE_DEFAULT;
+#if (USB_EP_WATCHDOG_ENABLE == 1)
+	usb.WDG_EP_timeout = USB_EP_WATCHDOG_TIMEOUT+1;
+#endif
 	USB_Reset();
 	// Init TIMER
 	CLK_PeripheralClockConfig(CLK_PERIPHERAL_TIMER1, ENABLE);
@@ -171,6 +174,9 @@ void usb_rx_ok(void)
 				}	else {
 					usb_send_nack();
 				}
+#if (USB_EP_WATCHDOG_ENABLE == 1)
+				if (usb.WDG_EP_timeout > 0) usb.WDG_EP_timeout = 0;
+#endif
 			}
 			usb.stage = USB_STAGE_NONE;
 			break;
@@ -185,7 +191,7 @@ void usb_rx_ok(void)
 					if (usb.active_EP_num == 0) usb.EP0_data_stage = usb.stage; // USB_STAGE_SETUP or USB_STAGE_OUT
 					usb.EP[usb.active_EP_num].rx_length = (uint8_t)(14 - ll_usb_rx_count);
 					if (usb.EP[usb.active_EP_num].rx_length > 3) {
-						usb.EP[usb.active_EP_num].rx_length -= 3;
+						usb.EP[usb.active_EP_num].rx_length -= 3; // 1..9
 						usb_copy_rx_packet(usb.active_EP_num);
 					} else usb.EP[usb.active_EP_num].rx_length = 0;
 				}
@@ -236,9 +242,20 @@ int8_t USB_Send_Data(uint8_t * buffer, uint8_t length, uint8_t EP_num)
 {
 	uint8_t i;
 	uint8_t flag = 0;
+	uint16_t timeout = 30000;
 	
 	if (EP_num == 0) { // EP 0 - CONTROL
-		while (usb.EP[0].tx_state == USB_EP_DATA_READY) {} // wait for prev transmission
+		//while (usb.EP[0].tx_state == USB_EP_DATA_READY) {} // wait for prev transmission 
+		while ((usb.EP[0].tx_state == USB_EP_DATA_READY)&&(timeout)) // wait for prev transmission 
+		{ timeout--; }
+		if (timeout == 0) {
+			usb.EP[0].tx_state = USB_EP_NO_DATA; // drop old packet
+#if (USB_EP_WATCHDOG_ENABLE == 1)
+			USB_disconnect();
+			USB_Reset();
+			usb.WDG_EP_timeout = -USB_EP_WATCHDOG_RECONNECT_DELAY;
+#endif
+		}
 		usb.EP[0].tx_data_sync = USB_PID_DATA1;
 	} else { // EP 1 - INTR
 		if (usb.dev_state != USB_STATE_CONFIGURED) return -2;
@@ -317,6 +334,34 @@ void USB_Send_STALL(uint8_t EP_num)
 	USB_Send_STALL(0);
 }
 
+void USB_NRZI_RX_Decode(uint8_t *p_data, uint8_t length)
+{
+	uint8_t i,j;
+	uint8_t byte;
+	uint16_t word = p_data[0] << 8;
+	uint8_t offset = 0;
+	uint8_t cnt = 0;
+	for(i=0; i<length; i++) {
+		word >>=8;
+		word |= (p_data[i+1] << 8);
+		byte = 0;
+		j=0;
+		for(j=0;j<8;j++) {
+			if (word & (1 << (j+offset))) {
+				byte |= (uint8_t)(1 << j);
+				cnt++;
+				if (cnt == 6) {
+					offset++;
+					cnt=0;
+				}
+			} else {
+				cnt=0;
+			}
+		}
+		p_data[i] = byte;
+	}
+}
+
 void USB_loop(void)
 {
 	if ((GPIOC->IDR & 0xC0) == 0) {
@@ -332,6 +377,7 @@ void USB_loop(void)
 		if (usb.EP0_data_stage == USB_STAGE_SETUP) // EP0 Setup stage
 		{
 			t_USB_SetupReq *p_USB_SetupReq = (t_USB_SetupReq*)(usb.EP[0].rx_buffer);
+			
 			switch (p_USB_SetupReq->bmRequest & 0x1F)
 			{
 				case USB_REQ_RECIPIENT_DEVICE: // Device request
@@ -340,26 +386,27 @@ void USB_loop(void)
 					{
 						case USB_REQ_GET_DESCRIPTOR: // GET_DESCRIPTOR
 						{
+							uint16_t wLength = (uint16_t)p_USB_SetupReq->wLength_LO | (uint16_t)((uint16_t)p_USB_SetupReq->wLength_HI << 8);
 							switch (p_USB_SetupReq->wValue_HI)
 							{
 								case USB_DESC_TYPE_DEVICE:	// Device desc
 								{
-									USB_Send_Data(usb_device_descriptor, (uint8_t)MIN(p_USB_SetupReq->wLength_LO, SIZE_DEVICE_DESCRIPTOR), 0);
+									USB_Send_Data(usb_device_descriptor, 
+									(uint8_t)MIN(wLength, SIZE_DEVICE_DESCRIPTOR), 0);
 									break;
 								}
 								case USB_DESC_TYPE_CONFIGURATION:	// Configuration desc
 								{
-									USB_Send_Data(usb_configuration_descriptor, (uint8_t)MIN(p_USB_SetupReq->wLength_LO, SIZE_CONFIGURATION_DESCRIPTOR), 0);
+									USB_Send_Data(usb_configuration_descriptor, 
+										(uint8_t)MIN(wLength, SIZE_CONFIGURATION_DESCRIPTOR), 0);
 									break;
 								}
 								case USB_DESC_TYPE_STRING: // String desc
 								{
-									if (p_USB_SetupReq->wValue_LO < LENGTH_STRING_DESCRIPTOR) {
+									//if (p_USB_SetupReq->wValue_LO < LENGTH_STRING_DESCRIPTOR) {
 										USB_Send_Data(USB_String_Descriptors[p_USB_SetupReq->wValue_LO], 
-												(uint8_t)MIN(p_USB_SetupReq->wLength_LO, USB_String_Descriptors_Length[p_USB_SetupReq->wValue_LO]), 0);
-									} else {
-										usb_control_error();
-									}
+												(uint8_t)MIN(wLength, USB_String_Descriptors_Length[p_USB_SetupReq->wValue_LO]), 0);
+									//} else usb_control_error();
 									break;
 								}
 								default:
@@ -542,6 +589,45 @@ void USB_loop(void)
 					{
 						USB_Setup_Request_callback(p_USB_SetupReq);
 					}
+					switch (p_USB_SetupReq->bRequest) 
+					{
+						case USB_REQ_CLEAR_FEATURE:
+						{
+							switch (usb.dev_state) 
+							{
+								case USB_STATE_ADDRESSED:          
+									//if ((p_USB_SetupReq->wIndex_LO != 0x00) && (p_USB_SetupReq->wIndex_LO != 0x80))
+									if ((p_USB_SetupReq->wIndex_LO & 0x7F) == 0x1) // EP 1 
+									{
+										//USBD_LL_StallEP(pdev , p_USB_SetupReq->wIndex_LO);
+										USB_Send_Data(NULL, 0, 0);
+									} else usb_control_error();
+									break;	
+									
+								case USB_STATE_CONFIGURED:   
+									if (p_USB_SetupReq->wValue_LO == USB_FEATURE_EP_HALT)
+									{
+										//if ((p_USB_SetupReq->wIndex_LO & 0x7F) != 0x00)
+										if ((p_USB_SetupReq->wIndex_LO & 0x7F) == 0x1) // EP 1 
+										{
+											//USBD_LL_ClearStallEP(pdev , p_USB_SetupReq->wIndex_LO);
+											//USB_Setup_Request_callback(p_USB_SetupReq);
+											USB_Send_Data(NULL, 0, 0);
+										} else usb_control_error();
+									}
+									break;
+									
+								default:                         
+									usb_control_error();
+									break;    
+							}
+							break;
+						}
+						
+						default:
+							usb_control_error();
+							break;
+					}
 					/* TODO!
 					switch (p_USB_SetupReq->bRequest) 
 					{
@@ -647,13 +733,15 @@ void USB_loop(void)
 			}
 			usb.EP[0].rx_state = USB_EP_NO_DATA;
 		} else { // EP0 Data stage
-			USB_EP0_RxReady_callback(usb.EP[0].rx_buffer);
+			USB_NRZI_RX_Decode(usb.EP[0].rx_buffer, usb.EP[0].rx_length);
+			USB_EP0_RxReady_callback(usb.EP[0].rx_buffer, usb.EP[0].rx_length);
 			usb.EP[0].rx_state = USB_EP_NO_DATA;
 		}
 	}
 	
 	if (usb.EP[1].rx_state == USB_EP_DATA_READY) {
-		USB_EP1_RxReady_callback(usb.EP[1].rx_buffer);
+		USB_NRZI_RX_Decode(usb.EP[1].rx_buffer, usb.EP[1].rx_length);
+		USB_EP1_RxReady_callback(usb.EP[1].rx_buffer, usb.EP[1].rx_length);
 		usb.EP[1].rx_state = USB_EP_NO_DATA;
 	}
 }
@@ -661,37 +749,52 @@ void USB_loop(void)
 void USB_slow_loop(void)
 {
 #if (USB_CLOCK_HSI == 1)
-	if (usb.trimming_stage == HSI_TRIMMER_DISABLE) return;
-	if (usb.trimming_stage == HSI_TRIMMER_STARTED)
-	{
-		usb.delay_counter++;
-		if (usb.delay_counter == USB_CONNECT_TIMEOUT)
+	if (usb.trimming_stage != HSI_TRIMMER_DISABLE) {
+		if (usb.trimming_stage == HSI_TRIMMER_STARTED)
 		{
-			usb.delay_counter = 0;
-			usb.HSI_Trim_val++;
-			usb.HSI_Trim_val &= 0x0F;
-			CLK->HSITRIMR = (uint8_t)((CLK->HSITRIMR & (~0x0F)) | usb.HSI_Trim_val);
+			usb.delay_counter++;
+			if (usb.delay_counter == USB_CONNECT_TIMEOUT)
+			{
+				usb.delay_counter = 0;
+				usb.HSI_Trim_val++;
+				usb.HSI_Trim_val &= 0x0F;
+				CLK->HSITRIMR = (uint8_t)((CLK->HSITRIMR & (~0x0F)) | usb.HSI_Trim_val);
+				USB_disconnect();
+				USB_Reset();
+				usb.trimming_stage = HSI_TRIMMER_RECONNECT_DELAY;
+			}
+		} else
+		if (usb.trimming_stage == HSI_TRIMMER_RECONNECT_DELAY)
+		{
+			usb.delay_counter++;
+			if (usb.delay_counter == USB_RECONNECT_DELAY)
+			{
+				usb.delay_counter = 0;
+				usb.trimming_stage = HSI_TRIMMER_ENABLE;
+				USB_connect();
+			}
+		} else
+		if (usb.trimming_stage == HSI_TRIMMER_WRITE_TRIM_VAL)
+		{
+			FLASH_Unlock(FLASH_MEMTYPE_DATA);
+			*p_HSI_TRIM_VAL = usb.HSI_Trim_val;
+			*p_HSI_TRIMING_DONE = MAGIC_VAL;
+			usb.trimming_stage = HSI_TRIMMER_DISABLE;
+		}
+	}
+#endif
+#if (USB_EP_WATCHDOG_ENABLE == 1)
+	//if ((usb.dev_state == USB_STATE_CONFIGURED)||(usb.WDG_EP_timeout < 0)) {
+	if ((usb.dev_state != USB_STATE_DEFAULT)||(usb.WDG_EP_timeout < 0)) {
+		if (usb.WDG_EP_timeout < USB_EP_WATCHDOG_TIMEOUT) usb.WDG_EP_timeout++;
+		if (usb.WDG_EP_timeout == USB_EP_WATCHDOG_TIMEOUT) {
 			USB_disconnect();
 			USB_Reset();
-			usb.trimming_stage = HSI_TRIMMER_RECONNECT_DELAY;
-		}
-	} else
-	if (usb.trimming_stage == HSI_TRIMMER_RECONNECT_DELAY)
-	{
-		usb.delay_counter++;
-		if (usb.delay_counter == USB_RECONNECT_DELAY)
-		{
-			usb.delay_counter = 0;
-			usb.trimming_stage = HSI_TRIMMER_ENABLE;
+			usb.WDG_EP_timeout = -USB_EP_WATCHDOG_RECONNECT_DELAY;
+		} else
+		if (usb.WDG_EP_timeout == 0) { // Connect
 			USB_connect();
 		}
-	} else
-	if (usb.trimming_stage == HSI_TRIMMER_WRITE_TRIM_VAL)
-	{
-		FLASH_Unlock(FLASH_MEMTYPE_DATA);
-		*p_HSI_TRIM_VAL = usb.HSI_Trim_val;
-		*p_HSI_TRIMING_DONE = MAGIC_VAL;
-		usb.trimming_stage = HSI_TRIMMER_DISABLE;
 	}
 #endif
 }

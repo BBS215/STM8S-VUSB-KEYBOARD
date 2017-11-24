@@ -6,13 +6,16 @@
 /// SETTINGS ///////////////////////////////////////////////
 #define SIZE_DEVICE_DESCRIPTOR 					18
 #define SIZE_CONFIGURATION_DESCRIPTOR 	34
-#define SIZE_REPORT_DESCRIPTOR 					117
+//#define SIZE_REPORT_DESCRIPTOR 					117
+#define SIZE_REPORT_DESCRIPTOR 					149
 #define SIZE_HID_DESCRIPTOR 						9
 
 #define INTERFACE_ID_HIDDev 						0
 #define STD_KEYBOARD_REPORT_ID 					41
 #define EXT1_KEYBOARD_REPORT_ID 				42
 #define EXT2_KEYBOARD_REPORT_ID 				43
+#define CONFIGURE_KEYS_REPORT_ID				3
+#define READ_KEYS_REPORT_ID							4
 
 #define LENGTH_STRING_DESCRIPTOR 				4
 #define SIZE_STRING_LANGID 							4

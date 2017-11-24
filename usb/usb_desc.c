@@ -87,7 +87,7 @@ const unsigned char USB_HID_descriptor[SIZE_HID_DESCRIPTOR] =
 };
 
 // HID keyboard
-const unsigned char usb_report_descriptor[SIZE_REPORT_DESCRIPTOR] = // 66+27+24
+const unsigned char usb_report_descriptor[SIZE_REPORT_DESCRIPTOR] = // 66+27+24+32
 {
 //////////////// KEYBOARD page 07 /////////////////////////////////////////////////
   0x05, 0x01,                    // USAGE_PAGE (Generic Desktop)
@@ -148,6 +148,21 @@ const unsigned char usb_report_descriptor[SIZE_REPORT_DESCRIPTOR] = // 66+27+24
   0x19, 0x00,				             //   USAGE_MINIMUM (Undefined)
   0x29, 0x8d,				             //   USAGE_MAXIMUM (System Menu Down)
   0x81, 0x00,                    //   INPUT (Data,Ary,Abs)
+		0x06, 0x00, 0xff,              //   USAGE_PAGE (Vendor Defined Page 1)
+    0x09, 0x01,                    //   USAGE (Vendor Usage 1)
+    0x85, CONFIGURE_KEYS_REPORT_ID,//   REPORT_ID
+    0x15, 0x00,                    //   LOGICAL_MINIMUM (0)
+    0x26, 0xff, 0x00,              //   LOGICAL_MAXIMUM (255)
+    0x75, 0x08,                    //   REPORT_SIZE (8)
+    0x95, 0x05,                    //   REPORT_COUNT (5)
+    0x91, 0x82,                    //   OUTPUT (Data,Var,Abs,Vol)
+    0x09, 0x02,                    //   USAGE (Vendor Usage 2)
+    0x85, READ_KEYS_REPORT_ID,     //   REPORT_ID
+    0x95, 0x01,                    //   REPORT_COUNT (1)
+    0x91, 0x82,                    //   OUTPUT (Data,Var,Abs,Vol)
+    0x09, 0x02,                    //   USAGE (Vendor Usage 2)
+    0x95, 0x05,                    //   REPORT_COUNT (5)
+    0x81, 0x00,                    //   INPUT (Data,Ary,Abs)
   0xc0                           // END_COLLECTION
 };
 
