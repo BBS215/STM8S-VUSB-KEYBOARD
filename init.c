@@ -69,12 +69,10 @@ void Check_OPTION_BYTE(void)
 			*((NEAR uint8_t*)option_byte_addr) = option_byte;
 			FLASH_WaitForLastOperation(FLASH_MEMTYPE_PROG);
 		} while(*((NEAR uint8_t*)option_byte_addr) != option_byte);
-		//FLASH_WaitForLastOperation(FLASH_MEMTYPE_PROG);
 		do {
 			*((NEAR uint8_t*)((uint16_t)(option_byte_addr + 1))) = (uint8_t)(~option_byte);
 			FLASH_WaitForLastOperation(FLASH_MEMTYPE_PROG);
 		} while(*((NEAR uint8_t*)((uint16_t)(option_byte_addr + 1))) != (uint8_t)(~option_byte));
-		//FLASH_WaitForLastOperation(FLASH_MEMTYPE_PROG);
 		
 		// Disable write access to option bytes
 		FLASH->CR2 &= (uint8_t)(~FLASH_CR2_OPT);
@@ -89,7 +87,7 @@ void SYSTimer_Init(void)
 {
 	CLK_PeripheralClockConfig(CLK_PERIPHERAL_TIMER2, ENABLE);
 	TIM2_DeInit();
-	TIM2_TimeBaseInit(TIM2_PRESCALER_16, 10000); // 16 MHz / 16 / 10000 = 100 Hz
+	TIM2_TimeBaseInit(TIM2_PRESCALER_16, 2500); // 16 MHz / 16 / 2500 = 400 Hz
 	TIM2_ClearFlag(TIM2_FLAG_UPDATE);
 	TIM2_ITConfig(TIM2_IT_UPDATE, ENABLE);
 	TIM2_Cmd(ENABLE);

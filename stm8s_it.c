@@ -274,10 +274,10 @@ INTERRUPT_HANDLER(TIM1_CAP_COM_IRQHandler, 12)
   * @param  None
   * @retval None
   */
- extern volatile uint8_t g_systimer_flag;
- INTERRUPT_HANDLER(TIM2_UPD_OVF_BRK_IRQHandler, 13)
+ extern volatile uint8_t g_systimer_400Hz_flag;
+INTERRUPT_HANDLER(TIM2_UPD_OVF_BRK_IRQHandler, 13)
  {
-		g_systimer_flag = 1;
+		g_systimer_400Hz_flag = 1;
 		TIM2_ClearFlag(TIM2_FLAG_UPDATE);
  }
 

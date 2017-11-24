@@ -270,7 +270,7 @@ AWU_Timebase_TypeDef	lib\inc\stm8s_awu.h	64;"	typedef	typeref:enum:__anon28
 AWU_TypeDef	lib\inc\stm8s.h	441;"	typedef	typeref:struct:AWU_struct
 AWU_struct	lib\inc\stm8s.h	435;"	struct
 AffBit	lib\inc\stm8s.h	2792;"	macro
-AltSetting	main.h	31;"	member	struct:s_HID_Dev
+AltSetting	main.h	59;"	member	struct:s_HID_Dev
 BEEP	lib\inc\stm8s.h	2612;"	macro
 BEEP_BaseAddress	lib\inc\stm8s.h	2572;"	macro
 BEEP_CALIBRATION_DEFAULT	lib\inc\stm8s_beep.h	61;"	macro
@@ -298,21 +298,17 @@ BRR2	lib\inc\stm8s.h	1767;"	member	struct:UART1_struct
 BRR2	lib\inc\stm8s.h	1865;"	member	struct:UART2_struct
 BRR2	lib\inc\stm8s.h	1972;"	member	struct:UART3_struct
 BRR2	lib\inc\stm8s.h	2064;"	member	struct:UART4_struct
-BTN_0	peripheral.h	22;"	macro
-BTN_1	peripheral.h	23;"	macro
-BTN_2	peripheral.h	24;"	macro
-BTN_3	peripheral.h	25;"	macro
-BTN_4	peripheral.h	26;"	macro
-BTN_5	peripheral.h	27;"	macro
-BTN_6	peripheral.h	28;"	macro
-BTN_7	peripheral.h	29;"	macro
-BTN_CNT	peripheral.h	30;"	macro
-BTN_TIME_TRESH	peripheral.h	32;"	macro
-BTN_USB_send_Loop	main.c	100;"	function	signature:(void)
+BTN_CNT	peripheral.h	22;"	macro
+BTN_COL_CNT	peripheral.h	25;"	macro
+BTN_ROW_CNT	peripheral.h	24;"	macro
+BTN_TIME_TRESH	peripheral.h	27;"	macro
+BTN_USB_send_Loop	main.c	147;"	function	signature:(void)
 BTR1	lib\inc\stm8s.h	2292;"	member	struct:__anon5::__anon6::__anon12
 BTR2	lib\inc\stm8s.h	2293;"	member	struct:__anon5::__anon6::__anon12
-BUTTON_pin	peripheral.c	36;"	variable
-BUTTON_port	peripheral.c	37;"	variable
+BUTTON_COL_pin	peripheral.c	40;"	variable
+BUTTON_COL_port	peripheral.c	39;"	variable
+BUTTON_ROW_pin	peripheral.c	37;"	variable
+BUTTON_ROW_port	peripheral.c	36;"	variable
 BYTE_0	lib\inc\stm8s.h	2799;"	macro
 BYTE_1	lib\inc\stm8s.h	2800;"	macro
 BYTE_2	lib\inc\stm8s.h	2801;"	macro
@@ -322,11 +318,11 @@ BitClr	lib\inc\stm8s.h	2820;"	macro
 BitSet	lib\inc\stm8s.h	2821;"	macro
 BitStatus	lib\inc\stm8s.h	232;"	typedef	typeref:enum:__anon2
 BitVal	lib\inc\stm8s.h	2822;"	macro
-Buttons_get_mask	peripheral.h	45;"	function	signature:(void)
-Buttons_init	peripheral.c	41;"	function	signature:(void)
-Buttons_init	peripheral.h	43;"	prototype	signature:(void)
-Buttons_loop	peripheral.c	53;"	function	signature:(void)
-Buttons_loop	peripheral.h	44;"	prototype	signature:(void)
+Buttons_get_mask	peripheral.h	41;"	function	signature:(void)
+Buttons_init	peripheral.c	44;"	function	signature:(void)
+Buttons_init	peripheral.h	39;"	prototype	signature:(void)
+Buttons_loop	peripheral.c	59;"	function	signature:(void)
+Buttons_loop	peripheral.h	40;"	prototype	signature:(void)
 CAN	lib\inc\stm8s.h	2615;"	macro
 CAN_BTR1_RESET_VALUE	lib\inc\stm8s.h	2499;"	macro
 CAN_BTR2_RESET_VALUE	lib\inc\stm8s.h	2500;"	macro
@@ -896,6 +892,7 @@ CNTRL	lib\inc\stm8s.h	1131;"	member	struct:TIM5_struct
 CNTRL	lib\inc\stm8s.h	624;"	member	struct:TIM1_struct
 CNTRL	lib\inc\stm8s.h	836;"	member	struct:TIM2_struct
 CNTRL	lib\inc\stm8s.h	958;"	member	struct:TIM3_struct
+CONFIGURE_KEYS_REPORT_ID	usb\usb_desc.h	17;"	macro
 CONST	lib\inc\stm8s.h	125;"	macro
 CONST	lib\inc\stm8s.h	131;"	macro
 CONST	lib\inc\stm8s.h	145;"	macro
@@ -1010,21 +1007,23 @@ EGR	lib\inc\stm8s.h	829;"	member	struct:TIM2_struct
 EGR	lib\inc\stm8s.h	953;"	member	struct:TIM3_struct
 EIER	lib\inc\stm8s.h	2289;"	member	struct:__anon5::__anon6::__anon12
 ENABLE	lib\inc\stm8s.h	234;"	enumerator	enum:__anon3
-EP	usb\usb.h	139;"	member	struct:usb_type
-EP0_data_stage	usb\usb.h	138;"	member	struct:usb_type
+EP	usb\usb.h	142;"	member	struct:usb_type
+EP0_data_stage	usb\usb.h	141;"	member	struct:usb_type
 ERROR	lib\inc\stm8s.h	237;"	enumerator	enum:__anon4
 ESR	lib\inc\stm8s.h	2288;"	member	struct:__anon5::__anon6::__anon12
 ETR	lib\inc\stm8s.h	612;"	member	struct:TIM1_struct
-EVENT_KEY_pressed	main.c	70;"	function	signature:(uint8_t key_num)
-EVENT_KEY_pressed	peripheral.h	46;"	prototype	signature:(uint8_t key_num)
-EVENT_KEY_released	main.c	71;"	function	signature:(uint8_t key_num)
-EVENT_KEY_released	peripheral.h	47;"	prototype	signature:(uint8_t key_num)
-EXT1_KB_Report	main.h	34;"	member	struct:s_HID_Dev
-EXT1_KB_Report_changed_flag	main.h	35;"	member	struct:s_HID_Dev
-EXT1_KEYBOARD_REPORT_ID	usb\usb_desc.h	14;"	macro
-EXT2_KB_Report	main.h	36;"	member	struct:s_HID_Dev
-EXT2_KB_Report_changed_flag	main.h	37;"	member	struct:s_HID_Dev
-EXT2_KEYBOARD_REPORT_ID	usb\usb_desc.h	15;"	macro
+EVENT_KEY_pressed	main.c	92;"	function	signature:(uint8_t key_num)
+EVENT_KEY_pressed	peripheral.h	42;"	prototype	signature:(uint8_t key_num)
+EVENT_KEY_released	main.c	93;"	function	signature:(uint8_t key_num)
+EVENT_KEY_released	peripheral.h	43;"	prototype	signature:(uint8_t key_num)
+EXT1_KB_Report	main.h	62;"	member	struct:s_HID_Dev
+EXT1_KB_Report_changed_flag	main.h	63;"	member	struct:s_HID_Dev
+EXT1_KEYBOARD_REPORT_ID	usb\usb_desc.h	15;"	macro
+EXT1_KEYBOARD_USAGE_PAGE	main.h	9;"	macro
+EXT2_KB_Report	main.h	64;"	member	struct:s_HID_Dev
+EXT2_KB_Report_changed_flag	main.h	65;"	member	struct:s_HID_Dev
+EXT2_KEYBOARD_REPORT_ID	usb\usb_desc.h	16;"	macro
+EXT2_KEYBOARD_USAGE_PAGE	main.h	10;"	macro
 EXTI	lib\inc\stm8s.h	2620;"	macro
 EXTI_BaseAddress	lib\inc\stm8s.h	2566;"	macro
 EXTI_CR1_PAIS	lib\inc\stm8s.h	1493;"	macro
@@ -1333,7 +1332,7 @@ GPIO_struct	lib\inc\stm8s.h	264;"	struct
 GTR	lib\inc\stm8s.h	1773;"	member	struct:UART1_struct
 GTR	lib\inc\stm8s.h	1872;"	member	struct:UART2_struct
 GTR	lib\inc\stm8s.h	2071;"	member	struct:UART4_struct
-HIBYTE	usb\usb_desc.h	25;"	macro
+HIBYTE	usb\usb_desc.h	28;"	macro
 HID_Dev	main.c	10;"	variable
 HID_KEYBOARD_LED_CAPSLOCK	hidclasscommon.h	46;"	macro
 HID_KEYBOARD_LED_COMPOSE	hidclasscommon.h	52;"	macro
@@ -1583,25 +1582,25 @@ HID_KEYBOARD_SC_W	hidclasscommon.h	85;"	macro
 HID_KEYBOARD_SC_X	hidclasscommon.h	86;"	macro
 HID_KEYBOARD_SC_Y	hidclasscommon.h	87;"	macro
 HID_KEYBOARD_SC_Z	hidclasscommon.h	88;"	macro
-HID_REPORT_FEATURE	usb\usb.h	90;"	macro
-HID_REPORT_INPUT	usb\usb.h	88;"	macro
-HID_REPORT_OUTPUT	usb\usb.h	89;"	macro
-HID_REQ_GET_IDLE	usb\usb.h	83;"	macro
-HID_REQ_GET_PROTOCOL	usb\usb.h	81;"	macro
-HID_REQ_GET_REPORT	usb\usb.h	85;"	macro
-HID_REQ_SET_IDLE	usb\usb.h	82;"	macro
-HID_REQ_SET_PROTOCOL	usb\usb.h	80;"	macro
-HID_REQ_SET_REPORT	usb\usb.h	84;"	macro
+HID_REPORT_FEATURE	usb\usb.h	93;"	macro
+HID_REPORT_INPUT	usb\usb.h	91;"	macro
+HID_REPORT_OUTPUT	usb\usb.h	92;"	macro
+HID_REQ_GET_IDLE	usb\usb.h	86;"	macro
+HID_REQ_GET_PROTOCOL	usb\usb.h	84;"	macro
+HID_REQ_GET_REPORT	usb\usb.h	88;"	macro
+HID_REQ_SET_IDLE	usb\usb.h	85;"	macro
+HID_REQ_SET_PROTOCOL	usb\usb.h	83;"	macro
+HID_REQ_SET_REPORT	usb\usb.h	87;"	macro
 HSE_VALUE	lib\inc\stm8s.h	108;"	macro
 HSE_VALUE	lib\inc\stm8s.h	110;"	macro
 HSIDivFactor	lib\src\stm8s_clk.c	48;"	variable
 HSITRIMR	lib\inc\stm8s.h	517;"	member	struct:CLK_struct
-HSI_TRIMMER_DISABLE	usb\usb.h	127;"	enumerator	enum:e_hsi_trimmer_stage
-HSI_TRIMMER_ENABLE	usb\usb.h	123;"	enumerator	enum:e_hsi_trimmer_stage
-HSI_TRIMMER_RECONNECT_DELAY	usb\usb.h	125;"	enumerator	enum:e_hsi_trimmer_stage
-HSI_TRIMMER_STARTED	usb\usb.h	124;"	enumerator	enum:e_hsi_trimmer_stage
-HSI_TRIMMER_WRITE_TRIM_VAL	usb\usb.h	126;"	enumerator	enum:e_hsi_trimmer_stage
-HSI_Trim_val	usb\usb.h	146;"	member	struct:usb_type
+HSI_TRIMMER_DISABLE	usb\usb.h	130;"	enumerator	enum:e_hsi_trimmer_stage
+HSI_TRIMMER_ENABLE	usb\usb.h	126;"	enumerator	enum:e_hsi_trimmer_stage
+HSI_TRIMMER_RECONNECT_DELAY	usb\usb.h	128;"	enumerator	enum:e_hsi_trimmer_stage
+HSI_TRIMMER_STARTED	usb\usb.h	127;"	enumerator	enum:e_hsi_trimmer_stage
+HSI_TRIMMER_WRITE_TRIM_VAL	usb\usb.h	129;"	enumerator	enum:e_hsi_trimmer_stage
+HSI_Trim_val	usb\usb.h	149;"	member	struct:usb_type
 HSI_VALUE	lib\inc\stm8s.h	117;"	macro
 HTRH	lib\inc\stm8s.h	324;"	member	struct:ADC1_struct
 HTRL	lib\inc\stm8s.h	325;"	member	struct:ADC1_struct
@@ -1761,7 +1760,7 @@ IER	lib\inc\stm8s.h	613;"	member	struct:TIM1_struct
 IER	lib\inc\stm8s.h	826;"	member	struct:TIM2_struct
 IER	lib\inc\stm8s.h	950;"	member	struct:TIM3_struct
 INIT_H_	init.h	2;"	macro
-INTERFACE_ID_HIDDev	usb\usb_desc.h	12;"	macro
+INTERFACE_ID_HIDDev	usb\usb_desc.h	13;"	macro
 INTERRUPT	lib\inc\stm8s.h	2769;"	macro
 INTERRUPT	lib\inc\stm8s.h	2771;"	macro
 INTERRUPT_HANDLER	lib\inc\stm8s.h	2747;"	macro
@@ -2165,17 +2164,23 @@ IWDG_WriteAccess_Disable	lib\inc\stm8s_iwdg.h	91;"	enumerator	enum:__anon85
 IWDG_WriteAccess_Enable	lib\inc\stm8s_iwdg.h	90;"	enumerator	enum:__anon85
 IWDG_WriteAccess_TypeDef	lib\inc\stm8s_iwdg.h	92;"	typedef	typeref:enum:__anon85
 IWDG_struct	lib\inc\stm8s.h	1604;"	struct
-IdleState	main.h	30;"	member	struct:s_HID_Dev
+IdleState	main.h	58;"	member	struct:s_HID_Dev
 Init_Clock	init.c	11;"	function	signature:(void)
 Init_Clock	init.h	7;"	prototype	signature:(void)
 Init_GPIO	init.c	3;"	function	signature:(void)
 Init_GPIO	init.h	6;"	prototype	signature:(void)
-KEY_changed	main.c	44;"	function	signature:(uint8_t key_num)
+KEY_SETTINGS_START_ADDR	main.h	6;"	macro
 KR	lib\inc\stm8s.h	1606;"	member	struct:IWDG_struct
-KeyCode	main.h	11;"	member	struct:__anon245
-KeyCode	main.h	24;"	member	struct:__anon247
-KeyCode_HI	main.h	18;"	member	struct:__anon246
-KeyCode_LO	main.h	17;"	member	struct:__anon246
+KeyCode	main.h	25;"	member	struct:__anon246
+KeyCode	main.h	38;"	member	struct:__anon248
+KeyCode	main.h	45;"	member	struct:__anon249
+KeyCode	main.h	52;"	member	struct:__anon250
+KeyCode_HI	main.h	17;"	member	struct:__anon245
+KeyCode_HI	main.h	32;"	member	struct:__anon247
+KeyCode_LO	main.h	16;"	member	struct:__anon245
+KeyCode_LO	main.h	31;"	member	struct:__anon247
+Key_settings	main.h	66;"	member	struct:s_HID_Dev
+Key_settings_to_write	main.h	67;"	member	struct:s_HID_Dev
 LEDS_CNT	peripheral.h	8;"	macro
 LED_0	peripheral.h	10;"	macro
 LED_1	peripheral.h	11;"	macro
@@ -2184,8 +2189,8 @@ LED_OFF	peripheral.h	14;"	macro
 LED_ON	peripheral.h	15;"	macro
 LED_pin	peripheral.c	6;"	variable
 LED_port	peripheral.c	7;"	variable
-LENGTH_STRING_DESCRIPTOR	usb\usb_desc.h	17;"	macro
-LOBYTE	usb\usb_desc.h	24;"	macro
+LENGTH_STRING_DESCRIPTOR	usb\usb_desc.h	20;"	macro
+LOBYTE	usb\usb_desc.h	27;"	macro
 LSI_FREQUENCY_MAX	lib\inc\stm8s_awu.h	77;"	macro
 LSI_FREQUENCY_MAX	lib\inc\stm8s_beep.h	64;"	macro
 LSI_FREQUENCY_MIN	lib\inc\stm8s_awu.h	76;"	macro
@@ -2230,7 +2235,7 @@ MIDR3	lib\inc\stm8s.h	2188;"	member	struct:__anon5::__anon6::__anon7
 MIDR3	lib\inc\stm8s.h	2309;"	member	struct:__anon5::__anon6::__anon13
 MIDR4	lib\inc\stm8s.h	2189;"	member	struct:__anon5::__anon6::__anon7
 MIDR4	lib\inc\stm8s.h	2310;"	member	struct:__anon5::__anon6::__anon13
-MIN	usb\usb.h	23;"	macro
+MIN	usb\usb.h	26;"	macro
 MSR	lib\inc\stm8s.h	2172;"	member	struct:__anon5
 MTSRH	lib\inc\stm8s.h	2199;"	member	struct:__anon5::__anon6::__anon7
 MTSRH	lib\inc\stm8s.h	2320;"	member	struct:__anon5::__anon6::__anon13
@@ -2238,7 +2243,8 @@ MTSRL	lib\inc\stm8s.h	2198;"	member	struct:__anon5::__anon6::__anon7
 MTSRL	lib\inc\stm8s.h	2319;"	member	struct:__anon5::__anon6::__anon13
 MemoryAddressCast	lib\inc\stm8s.h	156;"	macro
 MemoryAddressCast	lib\inc\stm8s.h	160;"	macro
-Modifier	main.h	9;"	member	struct:__anon245
+Modifier	main.h	23;"	member	struct:__anon246
+Modifiers	main.h	15;"	member	struct:__anon245
 MskBit	lib\inc\stm8s.h	2795;"	macro
 NCR2	lib\inc\stm8s.h	1513;"	member	struct:FLASH_struct
 NEAR	lib\inc\stm8s.h	122;"	macro
@@ -2251,7 +2257,7 @@ NOPT3	lib\inc\stm8s.h	1587;"	member	struct:OPT_struct
 NOPT4	lib\inc\stm8s.h	1589;"	member	struct:OPT_struct
 NOPT5	lib\inc\stm8s.h	1591;"	member	struct:OPT_struct
 NOPT7	lib\inc\stm8s.h	1595;"	member	struct:OPT_struct
-NULL	usb\usb.h	21;"	macro
+NULL	usb\usb.h	24;"	macro
 NonHandledInterrupt	stm8s_it.h	44;"	prototype	signature:(void)
 OARH	lib\inc\stm8s.h	1329;"	member	struct:I2C_struct
 OARL	lib\inc\stm8s.h	1328;"	member	struct:I2C_struct
@@ -2289,8 +2295,9 @@ PUKR	lib\inc\stm8s.h	1519;"	member	struct:FLASH_struct
 Page	lib\inc\stm8s.h	2322;"	member	struct:__anon5	typeref:union:__anon5::__anon6
 PointerAttr	lib\inc\stm8s.h	155;"	macro
 PointerAttr	lib\inc\stm8s.h	159;"	macro
-Protocol	main.h	29;"	member	struct:s_HID_Dev
+Protocol	main.h	57;"	member	struct:s_HID_Dev
 RCR	lib\inc\stm8s.h	629;"	member	struct:TIM1_struct
+READ_KEYS_REPORT_ID	usb\usb_desc.h	18;"	macro
 RECR	lib\inc\stm8s.h	2291;"	member	struct:__anon5::__anon6::__anon12
 RESERVED	lib\inc\stm8s.h	1977;"	member	struct:UART3_struct
 RESERVED	lib\inc\stm8s.h	315;"	member	struct:ADC1_struct
@@ -2330,10 +2337,11 @@ RST_SR_WWDGF	lib\inc\stm8s.h	1680;"	macro
 RST_TypeDef	lib\inc\stm8s.h	1670;"	typedef	typeref:struct:RST_struct
 RST_struct	lib\inc\stm8s.h	1666;"	struct
 RXCRCR	lib\inc\stm8s.h	1699;"	member	struct:SPI_struct
-ReportID	main.h	16;"	member	struct:__anon246
-ReportID	main.h	23;"	member	struct:__anon247
-ReportID	main.h	8;"	member	struct:__anon245
-Reserved	main.h	10;"	member	struct:__anon245
+ReportID	main.h	22;"	member	struct:__anon246
+ReportID	main.h	30;"	member	struct:__anon247
+ReportID	main.h	37;"	member	struct:__anon248
+ReportID	main.h	43;"	member	struct:__anon249
+Reserved	main.h	24;"	member	struct:__anon246
 Reserved1	lib\inc\stm8s.h	2294;"	member	struct:__anon5::__anon6::__anon12
 Reserved2	lib\inc\stm8s.h	2300;"	member	struct:__anon5::__anon6::__anon12
 RxFIFO	lib\inc\stm8s.h	2321;"	member	union:__anon5::__anon6	typeref:struct:__anon5::__anon6::__anon13
@@ -2346,12 +2354,12 @@ S8_MIN	lib\inc\stm8s.h	241;"	macro
 SET	lib\inc\stm8s.h	232;"	enumerator	enum:__anon2
 SIZE_CONFIGURATION_DESCRIPTOR	usb\usb_desc.h	8;"	macro
 SIZE_DEVICE_DESCRIPTOR	usb\usb_desc.h	7;"	macro
-SIZE_HID_DESCRIPTOR	usb\usb_desc.h	10;"	macro
-SIZE_REPORT_DESCRIPTOR	usb\usb_desc.h	9;"	macro
-SIZE_STRING_LANGID	usb\usb_desc.h	18;"	macro
-SIZE_STRING_PRODUCT	usb\usb_desc.h	20;"	macro
-SIZE_STRING_SERIAL	usb\usb_desc.h	21;"	macro
-SIZE_STRING_VENDOR	usb\usb_desc.h	19;"	macro
+SIZE_HID_DESCRIPTOR	usb\usb_desc.h	11;"	macro
+SIZE_REPORT_DESCRIPTOR	usb\usb_desc.h	10;"	macro
+SIZE_STRING_LANGID	usb\usb_desc.h	21;"	macro
+SIZE_STRING_PRODUCT	usb\usb_desc.h	23;"	macro
+SIZE_STRING_SERIAL	usb\usb_desc.h	24;"	macro
+SIZE_STRING_VENDOR	usb\usb_desc.h	22;"	macro
 SMCR	lib\inc\stm8s.h	1120;"	member	struct:TIM5_struct
 SMCR	lib\inc\stm8s.h	1259;"	member	struct:TIM6_struct
 SMCR	lib\inc\stm8s.h	611;"	member	struct:TIM1_struct
@@ -2479,9 +2487,10 @@ SR2	lib\inc\stm8s.h	615;"	member	struct:TIM1_struct
 SR2	lib\inc\stm8s.h	828;"	member	struct:TIM2_struct
 SR2	lib\inc\stm8s.h	952;"	member	struct:TIM3_struct
 SR3	lib\inc\stm8s.h	1334;"	member	struct:I2C_struct
-STD_KB_Report	main.h	32;"	member	struct:s_HID_Dev
-STD_KB_Report_changed_flag	main.h	33;"	member	struct:s_HID_Dev
-STD_KEYBOARD_REPORT_ID	usb\usb_desc.h	13;"	macro
+STD_KB_Report	main.h	60;"	member	struct:s_HID_Dev
+STD_KB_Report_changed_flag	main.h	61;"	member	struct:s_HID_Dev
+STD_KEYBOARD_REPORT_ID	usb\usb_desc.h	14;"	macro
+STD_KEYBOARD_USAGE_PAGE	main.h	7;"	macro
 STRINGVECTOR	lib\inc\stm8s.h	2757;"	macro
 SUCCESS	lib\inc\stm8s.h	237;"	enumerator	enum:__anon4
 SWCR	lib\inc\stm8s.h	510;"	member	struct:CLK_struct
@@ -2490,10 +2499,10 @@ SWR	lib\inc\stm8s.h	509;"	member	struct:CLK_struct
 SYSTimer_Init	init.c	86;"	function	signature:(void)
 SYSTimer_Init	init.h	8;"	prototype	signature:(void)
 SetBit	lib\inc\stm8s.h	2788;"	macro
-String_LangID	usb\usb_desc.c	154;"	variable
-String_Product	usb\usb_desc.c	170;"	variable
-String_Serial	usb\usb_desc.c	179;"	variable
-String_Vendor	usb\usb_desc.c	160;"	variable
+String_LangID	usb\usb_desc.c	169;"	variable
+String_Product	usb\usb_desc.c	185;"	variable
+String_Serial	usb\usb_desc.c	194;"	variable
+String_Vendor	usb\usb_desc.c	175;"	variable
 TBR	lib\inc\stm8s.h	439;"	member	struct:AWU_struct
 TDRH	lib\inc\stm8s.h	322;"	member	struct:ADC1_struct
 TDRH	lib\inc\stm8s.h	393;"	member	struct:ADC2_struct
@@ -3744,8 +3753,8 @@ TRISER	lib\inc\stm8s.h	1338;"	member	struct:I2C_struct
 TRUE	lib\inc\stm8s.h	230;"	enumerator	enum:__anon1
 TSR	lib\inc\stm8s.h	2173;"	member	struct:__anon5
 TXCRCR	lib\inc\stm8s.h	1700;"	member	struct:SPI_struct
-TYPE_HID_DESCRIPTOR	usb\usb_desc.h	36;"	macro
-TYPE_REPORT_DESCRIPTOR	usb\usb_desc.h	37;"	macro
+TYPE_HID_DESCRIPTOR	usb\usb_desc.h	39;"	macro
+TYPE_REPORT_DESCRIPTOR	usb\usb_desc.h	40;"	macro
 TxMailbox	lib\inc\stm8s.h	2200;"	member	union:__anon5::__anon6	typeref:struct:__anon5::__anon6::__anon7
 U16_MAX	lib\inc\stm8s.h	242;"	macro
 U32_MAX	lib\inc\stm8s.h	245;"	macro
@@ -4337,98 +4346,104 @@ UART4_WakeUp_TypeDef	lib\inc\stm8s_uart4.h	60;"	typedef	typeref:enum:__anon233
 UART4_WordLength_TypeDef	lib\inc\stm8s_uart4.h	125;"	typedef	typeref:enum:__anon241
 UART4_struct	lib\inc\stm8s.h	2059;"	struct
 USB_CLOCK_HSI	usb\usb.h	10;"	macro
-USB_CONFIG_REMOTE_WAKEUP	usb\usb.h	78;"	macro
-USB_CONFIG_SELF_POWERED	usb\usb.h	77;"	macro
+USB_CONFIG_REMOTE_WAKEUP	usb\usb.h	81;"	macro
+USB_CONFIG_SELF_POWERED	usb\usb.h	80;"	macro
 USB_CONNECT_PIN	usb\usb.h	14;"	macro
 USB_CONNECT_PORT	usb\usb.h	13;"	macro
 USB_CONNECT_TIMEOUT	usb\usb.h	11;"	macro
-USB_Class_DeInit_callback	main.c	214;"	function	signature:(void)
-USB_Class_DeInit_callback	usb\usb.h	162;"	prototype	signature:(void)
-USB_Class_Init_callback	main.c	195;"	function	signature:(uint8_t dev_config)
-USB_Class_Init_callback	usb\usb.h	161;"	prototype	signature:(uint8_t dev_config)
+USB_Class_DeInit_callback	main.c	276;"	function	signature:(void)
+USB_Class_DeInit_callback	usb\usb.h	168;"	prototype	signature:(void)
+USB_Class_Init_callback	main.c	252;"	function	signature:(uint8_t dev_config)
+USB_Class_Init_callback	usb\usb.h	167;"	prototype	signature:(uint8_t dev_config)
 USB_DESC_H_	usb\usb_desc.h	2;"	macro
-USB_DESC_TYPE_BOS	usb\usb_desc.h	34;"	macro
-USB_DESC_TYPE_CONFIGURATION	usb\usb_desc.h	28;"	macro
-USB_DESC_TYPE_DEVICE	usb\usb_desc.h	27;"	macro
-USB_DESC_TYPE_DEVICE_QUALIFIER	usb\usb_desc.h	32;"	macro
-USB_DESC_TYPE_ENDPOINT	usb\usb_desc.h	31;"	macro
-USB_DESC_TYPE_INTERFACE	usb\usb_desc.h	30;"	macro
-USB_DESC_TYPE_OTHER_SPEED_CONFIGURATION	usb\usb_desc.h	33;"	macro
-USB_DESC_TYPE_STRING	usb\usb_desc.h	29;"	macro
-USB_EP0_RxReady_callback	main.c	22;"	function	signature:(uint8_t *p_data)
-USB_EP0_RxReady_callback	usb\usb.h	158;"	prototype	signature:(uint8_t *p_data)
-USB_EP1_RxReady_callback	main.c	333;"	function	signature:(uint8_t *p_data)
-USB_EP1_RxReady_callback	usb\usb.h	159;"	prototype	signature:(uint8_t *p_data)
-USB_EP_DATA_READY	usb\usb.h	107;"	enumerator	enum:e_usb_ep_state
-USB_EP_NO_DATA	usb\usb.h	106;"	enumerator	enum:e_usb_ep_state
-USB_FEATURE_EP_HALT	usb\usb.h	73;"	macro
-USB_FEATURE_REMOTE_WAKEUP	usb\usb.h	74;"	macro
-USB_FEATURE_TEST_MODE	usb\usb.h	75;"	macro
+USB_DESC_TYPE_BOS	usb\usb_desc.h	37;"	macro
+USB_DESC_TYPE_CONFIGURATION	usb\usb_desc.h	31;"	macro
+USB_DESC_TYPE_DEVICE	usb\usb_desc.h	30;"	macro
+USB_DESC_TYPE_DEVICE_QUALIFIER	usb\usb_desc.h	35;"	macro
+USB_DESC_TYPE_ENDPOINT	usb\usb_desc.h	34;"	macro
+USB_DESC_TYPE_INTERFACE	usb\usb_desc.h	33;"	macro
+USB_DESC_TYPE_OTHER_SPEED_CONFIGURATION	usb\usb_desc.h	36;"	macro
+USB_DESC_TYPE_STRING	usb\usb_desc.h	32;"	macro
+USB_EP0_RxReady_callback	main.c	48;"	function	signature:(uint8_t *p_data, uint8_t length)
+USB_EP0_RxReady_callback	usb\usb.h	164;"	prototype	signature:(uint8_t *p_data, uint8_t length)
+USB_EP1_RxReady_callback	main.c	407;"	function	signature:(uint8_t *p_data, uint8_t length)
+USB_EP1_RxReady_callback	usb\usb.h	165;"	prototype	signature:(uint8_t *p_data, uint8_t length)
+USB_EP_DATA_READY	usb\usb.h	110;"	enumerator	enum:e_usb_ep_state
+USB_EP_NO_DATA	usb\usb.h	109;"	enumerator	enum:e_usb_ep_state
+USB_EP_WATCHDOG_ENABLE	usb\usb.h	18;"	macro
+USB_EP_WATCHDOG_RECONNECT_DELAY	usb\usb.h	20;"	macro
+USB_EP_WATCHDOG_TIMEOUT	usb\usb.h	19;"	macro
+USB_FEATURE_EP_HALT	usb\usb.h	76;"	macro
+USB_FEATURE_REMOTE_WAKEUP	usb\usb.h	77;"	macro
+USB_FEATURE_TEST_MODE	usb\usb.h	78;"	macro
 USB_HID_descriptor	usb\usb_desc.c	75;"	variable
 USB_H_	usb\usb.h	2;"	macro
 USB_Init	usb\usb.c	38;"	function	signature:(void)
-USB_Init	usb\usb.h	152;"	prototype	signature:(void)
-USB_KeyboardReport_EXT1_Data_t	main.h	19;"	typedef	typeref:struct:__anon246
-USB_KeyboardReport_EXT2_Data_t	main.h	25;"	typedef	typeref:struct:__anon247
-USB_KeyboardReport_STD_Data_t	main.h	12;"	typedef	typeref:struct:__anon245
+USB_Init	usb\usb.h	158;"	prototype	signature:(void)
+USB_KeyboardReport_EXT1_Data_t	main.h	33;"	typedef	typeref:struct:__anon247
+USB_KeyboardReport_EXT2_Data_t	main.h	39;"	typedef	typeref:struct:__anon248
+USB_KeyboardReport_STD_Data_t	main.h	26;"	typedef	typeref:struct:__anon246
 USB_MAX_NUM_CONFIGURATION	usb\usb.h	7;"	macro
 USB_MAX_NUM_INTERFACES	usb\usb.h	8;"	macro
-USB_PID_ACK	usb\usb.h	39;"	enumerator	enum:usb_packets_id_list
-USB_PID_DATA0	usb\usb.h	37;"	enumerator	enum:usb_packets_id_list
-USB_PID_DATA1	usb\usb.h	38;"	enumerator	enum:usb_packets_id_list
-USB_PID_IN	usb\usb.h	35;"	enumerator	enum:usb_packets_id_list
-USB_PID_NACK	usb\usb.h	40;"	enumerator	enum:usb_packets_id_list
-USB_PID_OUT	usb\usb.h	34;"	enumerator	enum:usb_packets_id_list
-USB_PID_SETUP	usb\usb.h	36;"	enumerator	enum:usb_packets_id_list
-USB_PID_STALL	usb\usb.h	41;"	enumerator	enum:usb_packets_id_list
+USB_NRZI_RX_Decode	usb\usb.c	337;"	function	signature:(uint8_t EP_num)
+USB_PID_ACK	usb\usb.h	42;"	enumerator	enum:usb_packets_id_list
+USB_PID_DATA0	usb\usb.h	40;"	enumerator	enum:usb_packets_id_list
+USB_PID_DATA1	usb\usb.h	41;"	enumerator	enum:usb_packets_id_list
+USB_PID_IN	usb\usb.h	38;"	enumerator	enum:usb_packets_id_list
+USB_PID_NACK	usb\usb.h	43;"	enumerator	enum:usb_packets_id_list
+USB_PID_OUT	usb\usb.h	37;"	enumerator	enum:usb_packets_id_list
+USB_PID_SETUP	usb\usb.h	39;"	enumerator	enum:usb_packets_id_list
+USB_PID_STALL	usb\usb.h	44;"	enumerator	enum:usb_packets_id_list
 USB_RECONNECT_DELAY	usb\usb.h	12;"	macro
-USB_REQ_CLEAR_FEATURE	usb\usb.h	52;"	macro
-USB_REQ_GET_CONFIGURATION	usb\usb.h	57;"	macro
-USB_REQ_GET_DESCRIPTOR	usb\usb.h	55;"	macro
-USB_REQ_GET_INTERFACE	usb\usb.h	59;"	macro
-USB_REQ_GET_STATUS	usb\usb.h	51;"	macro
-USB_REQ_RECIPIENT_DEVICE	usb\usb.h	46;"	macro
-USB_REQ_RECIPIENT_ENDPOINT	usb\usb.h	48;"	macro
-USB_REQ_RECIPIENT_INTERFACE	usb\usb.h	47;"	macro
-USB_REQ_RECIPIENT_MASK	usb\usb.h	49;"	macro
-USB_REQ_SET_ADDRESS	usb\usb.h	54;"	macro
-USB_REQ_SET_CONFIGURATION	usb\usb.h	58;"	macro
-USB_REQ_SET_DESCRIPTOR	usb\usb.h	56;"	macro
-USB_REQ_SET_FEATURE	usb\usb.h	53;"	macro
-USB_REQ_SET_INTERFACE	usb\usb.h	60;"	macro
-USB_REQ_SYNCH_FRAME	usb\usb.h	61;"	macro
-USB_REQ_TYPE_CLASS	usb\usb.h	69;"	macro
-USB_REQ_TYPE_MASK	usb\usb.h	71;"	macro
-USB_REQ_TYPE_STANDARD	usb\usb.h	68;"	macro
-USB_REQ_TYPE_VENDOR	usb\usb.h	70;"	macro
+USB_REQ_CLEAR_FEATURE	usb\usb.h	55;"	macro
+USB_REQ_GET_CONFIGURATION	usb\usb.h	60;"	macro
+USB_REQ_GET_DESCRIPTOR	usb\usb.h	58;"	macro
+USB_REQ_GET_INTERFACE	usb\usb.h	62;"	macro
+USB_REQ_GET_STATUS	usb\usb.h	54;"	macro
+USB_REQ_RECIPIENT_DEVICE	usb\usb.h	49;"	macro
+USB_REQ_RECIPIENT_ENDPOINT	usb\usb.h	51;"	macro
+USB_REQ_RECIPIENT_INTERFACE	usb\usb.h	50;"	macro
+USB_REQ_RECIPIENT_MASK	usb\usb.h	52;"	macro
+USB_REQ_SET_ADDRESS	usb\usb.h	57;"	macro
+USB_REQ_SET_CONFIGURATION	usb\usb.h	61;"	macro
+USB_REQ_SET_DESCRIPTOR	usb\usb.h	59;"	macro
+USB_REQ_SET_FEATURE	usb\usb.h	56;"	macro
+USB_REQ_SET_INTERFACE	usb\usb.h	63;"	macro
+USB_REQ_SYNCH_FRAME	usb\usb.h	64;"	macro
+USB_REQ_TYPE_CLASS	usb\usb.h	72;"	macro
+USB_REQ_TYPE_MASK	usb\usb.h	74;"	macro
+USB_REQ_TYPE_STANDARD	usb\usb.h	71;"	macro
+USB_REQ_TYPE_VENDOR	usb\usb.h	73;"	macro
 USB_RESET_DELAY	usb\usb.h	17;"	macro
 USB_Reset	usb\usb.c	18;"	function	signature:(void)
 USB_SELF_POWERED	usb\usb.h	9;"	macro
-USB_STAGE_NONE	usb\usb.h	27;"	enumerator	enum:usb_states_list
-USB_STAGE_OUT	usb\usb.h	29;"	enumerator	enum:usb_states_list
-USB_STAGE_SETUP	usb\usb.h	28;"	enumerator	enum:usb_states_list
-USB_STATE_ADDRESSED	usb\usb.h	64;"	macro
-USB_STATE_CONFIGURED	usb\usb.h	65;"	macro
-USB_STATE_DEFAULT	usb\usb.h	63;"	macro
-USB_SYNC_BYTE	usb\usb.h	44;"	macro
-USB_Send_Data	usb\usb.c	235;"	function	signature:(uint8_t * buffer, uint8_t length, uint8_t EP_num)
-USB_Send_Data	usb\usb.h	157;"	prototype	signature:(uint8_t * buffer, uint8_t length, uint8_t EP_num)
-USB_Send_STALL	usb\usb.c	307;"	function	signature:(uint8_t EP_num)
-USB_Setup_Request_callback	main.c	223;"	function	signature:(t_USB_SetupReq *p_req)
-USB_Setup_Request_callback	usb\usb.h	160;"	prototype	signature:(t_USB_SetupReq *p_req)
-USB_String_Descriptors	usb\usb_desc.c	186;"	variable
-USB_String_Descriptors_Length	usb\usb_desc.c	193;"	variable
-USB_connect	usb\usb.c	65;"	function	signature:(void)
-USB_connect	usb\usb.h	154;"	prototype	signature:(void)
-USB_disconnect	usb\usb.c	70;"	function	signature:(void)
-USB_disconnect	usb\usb.h	155;"	prototype	signature:(void)
-USB_loop	usb\usb.c	320;"	function	signature:(void)
-USB_loop	usb\usb.h	153;"	prototype	signature:(void)
-USB_slow_loop	usb\usb.c	661;"	function	signature:(void)
-USB_slow_loop	usb\usb.h	156;"	prototype	signature:(void)
+USB_STAGE_NONE	usb\usb.h	30;"	enumerator	enum:usb_states_list
+USB_STAGE_OUT	usb\usb.h	32;"	enumerator	enum:usb_states_list
+USB_STAGE_SETUP	usb\usb.h	31;"	enumerator	enum:usb_states_list
+USB_STATE_ADDRESSED	usb\usb.h	67;"	macro
+USB_STATE_CONFIGURED	usb\usb.h	68;"	macro
+USB_STATE_DEFAULT	usb\usb.h	66;"	macro
+USB_SYNC_BYTE	usb\usb.h	47;"	macro
+USB_Send_Data	usb\usb.c	241;"	function	signature:(uint8_t * buffer, uint8_t length, uint8_t EP_num)
+USB_Send_Data	usb\usb.h	163;"	prototype	signature:(uint8_t * buffer, uint8_t length, uint8_t EP_num)
+USB_Send_STALL	usb\usb.c	324;"	function	signature:(uint8_t EP_num)
+USB_Setup_Request_callback	main.c	285;"	function	signature:(t_USB_SetupReq *p_req)
+USB_Setup_Request_callback	usb\usb.h	166;"	prototype	signature:(t_USB_SetupReq *p_req)
+USB_String_Descriptors	usb\usb_desc.c	201;"	variable
+USB_String_Descriptors_Length	usb\usb_desc.c	208;"	variable
+USB_connect	usb\usb.c	68;"	function	signature:(void)
+USB_connect	usb\usb.h	160;"	prototype	signature:(void)
+USB_disconnect	usb\usb.c	73;"	function	signature:(void)
+USB_disconnect	usb\usb.h	161;"	prototype	signature:(void)
+USB_loop	usb\usb.c	366;"	function	signature:(void)
+USB_loop	usb\usb.h	159;"	prototype	signature:(void)
+USB_slow_loop	usb\usb.c	749;"	function	signature:(void)
+USB_slow_loop	usb\usb.h	162;"	prototype	signature:(void)
 USE_STDPERIPH_DRIVER	lib\inc\stm8s.h	95;"	macro
+UsagePage	main.h	14;"	member	struct:__anon245
 VECTOR_ID	lib\inc\stm8s.h	2758;"	macro
 ValBit	lib\inc\stm8s.h	2797;"	macro
+WDG_EP_timeout	usb\usb.h	152;"	member	struct:usb_type
 WR	lib\inc\stm8s.h	1631;"	member	struct:WWDG_struct
 WWDG	lib\inc\stm8s.h	2651;"	macro
 WWDG_BaseAddress	lib\inc\stm8s.h	2569;"	macro
@@ -4446,6 +4461,7 @@ WWDG_WR_MSB	lib\inc\stm8s.h	1654;"	macro
 WWDG_WR_RESET_VALUE	lib\inc\stm8s.h	1640;"	macro
 WWDG_WR_W	lib\inc\stm8s.h	1655;"	macro
 WWDG_struct	lib\inc\stm8s.h	1628;"	struct
+Write_key_settings	main.c	18;"	function	signature:(void)
 _COSMIC_	lib\inc\stm8s.h	82;"	macro
 _HID_CLASS_COMMON_H_	hidclasscommon.h	10;"	macro
 _IAR_	lib\inc\stm8s.h	86;"	macro
@@ -4490,34 +4506,36 @@ __STM8S_UART4_H	lib\inc\stm8s_uart4.h	30;"	macro
 __STM8S_WWDG_H	lib\inc\stm8s_wwdg.h	30;"	macro
 _stext	stm8s_it.h	43;"	prototype	signature:(void)
 _vectab	stm8_interrupt_vector.c	14;"	variable
-active_EP_num	usb\usb.h	135;"	member	struct:usb_type
+active_EP_num	usb\usb.h	138;"	member	struct:usb_type
+active_row	peripheral.h	31;"	member	struct:__anon251
 assert_failed	lib\inc\stm8s_conf.h	108;"	prototype	signature:(uint8_t* file, uint32_t line)
 assert_param	lib\inc\stm8s_conf.h	106;"	macro
 assert_param	lib\inc\stm8s_conf.h	110;"	macro
-bRequest	usb\usb.h	95;"	member	struct:usb_setup_req
-bmRequest	usb\usb.h	94;"	member	struct:usb_setup_req
+bRequest	usb\usb.h	98;"	member	struct:usb_setup_req
+bmRequest	usb\usb.h	97;"	member	struct:usb_setup_req
 bool	lib\inc\stm8s.h	230;"	typedef	typeref:enum:__anon1
-delay_counter	usb\usb.h	145;"	member	struct:usb_type
-dev_config	usb\usb.h	137;"	member	struct:usb_type
-dev_config_status	usb\usb.h	141;"	member	struct:usb_type
-dev_remote_wakeup	usb\usb.h	142;"	member	struct:usb_type
-dev_state	usb\usb.h	136;"	member	struct:usb_type
-device_address	usb\usb.h	133;"	member	struct:usb_type
+delay_counter	usb\usb.h	148;"	member	struct:usb_type
+dev_config	usb\usb.h	140;"	member	struct:usb_type
+dev_config_status	usb\usb.h	144;"	member	struct:usb_type
+dev_remote_wakeup	usb\usb.h	145;"	member	struct:usb_type
+dev_state	usb\usb.h	139;"	member	struct:usb_type
+device_address	usb\usb.h	136;"	member	struct:usb_type
 disableInterrupts	lib\inc\stm8s.h	2716;"	macro
 disableInterrupts	lib\inc\stm8s.h	2725;"	macro
 disableInterrupts	lib\inc\stm8s.h	2735;"	macro
-e_hsi_trimmer_stage	usb\usb.h	121;"	enum
-e_usb_ep_state	usb\usb.h	104;"	enum
+e_hsi_trimmer_stage	usb\usb.h	124;"	enum
+e_usb_ep_state	usb\usb.h	107;"	enum
 enableInterrupts	lib\inc\stm8s.h	2715;"	macro
 enableInterrupts	lib\inc\stm8s.h	2724;"	macro
 enableInterrupts	lib\inc\stm8s.h	2734;"	macro
+g_KeyCode	main.c	11;"	variable
 g_LEDS_mode	peripheral.c	9;"	variable
-g_buttons	peripheral.c	39;"	variable
-g_systimer_flag	main.c	9;"	variable
+g_buttons	peripheral.c	42;"	variable
+g_systimer_400Hz_flag	main.c	9;"	variable
 halt	lib\inc\stm8s.h	2722;"	macro
 halt	lib\inc\stm8s.h	2731;"	macro
 halt	lib\inc\stm8s.h	2741;"	macro
-holdtime	peripheral.h	38;"	member	struct:__anon248
+holdtime	peripheral.h	34;"	member	struct:__anon251
 int16_t	lib\inc\stm8s.h	211;"	typedef
 int32_t	lib\inc\stm8s.h	212;"	typedef
 int8_t	lib\inc\stm8s.h	210;"	typedef
@@ -4525,50 +4543,56 @@ interrupt_handler	stm8_interrupt_vector.c	11;"	member	struct:interrupt_vector	fi
 interrupt_handler_t	stm8_interrupt_vector.c	7;"	typedef	file:
 interrupt_instruction	stm8_interrupt_vector.c	10;"	member	struct:interrupt_vector	file:
 interrupt_vector	stm8_interrupt_vector.c	9;"	struct	file:
+key_num	main.h	44;"	member	struct:__anon249
+key_num	main.h	51;"	member	struct:__anon250
 ll_usb_rx	stm8s_it.h	40;"	prototype	signature:(void)
 ll_usb_rx_buffer	usb\usb.c	5;"	variable
 ll_usb_rx_count	usb\usb.c	8;"	variable
 ll_usb_tx	usb\usb.c	16;"	prototype	file:	signature:(void)
 ll_usb_tx_buffer_pointer	usb\usb.c	6;"	variable
 ll_usb_tx_count	usb\usb.c	7;"	variable
-main	main.c	340;"	function	signature:(void)
+main	main.c	414;"	function	signature:(void)
 nop	lib\inc\stm8s.h	2719;"	macro
 nop	lib\inc\stm8s.h	2728;"	macro
 nop	lib\inc\stm8s.h	2738;"	macro
 p_HSI_TRIMING_DONE	usb\usb.c	13;"	variable
 p_HSI_TRIM_VAL	usb\usb.c	12;"	variable
-pressed	peripheral.h	36;"	member	struct:__anon248
-reset_counter	usb\usb.h	140;"	member	struct:usb_type
+pressed	peripheral.h	32;"	member	struct:__anon251
+prev_key_mask	main.h	68;"	member	struct:s_HID_Dev
+reset_counter	usb\usb.h	143;"	member	struct:usb_type
 rim	lib\inc\stm8s.h	2717;"	macro
 rim	lib\inc\stm8s.h	2726;"	macro
 rim	lib\inc\stm8s.h	2736;"	macro
-rx_buffer	usb\usb.h	112;"	member	struct:s_USB_EP
-rx_length	usb\usb.h	113;"	member	struct:s_USB_EP
-rx_state	usb\usb.h	114;"	member	struct:s_USB_EP
+rx_buffer	usb\usb.h	115;"	member	struct:s_USB_EP
+rx_length	usb\usb.h	116;"	member	struct:s_USB_EP
+rx_state	usb\usb.h	117;"	member	struct:s_USB_EP
 s16	lib\inc\stm8s.h	222;"	typedef
 s32	lib\inc\stm8s.h	221;"	typedef
 s8	lib\inc\stm8s.h	223;"	typedef
-s_HID_Dev	main.h	27;"	struct
-s_USB_EP	usb\usb.h	110;"	struct
-setup_address	usb\usb.h	134;"	member	struct:usb_type
+s_HID_Dev	main.h	55;"	struct
+s_USB_EP	usb\usb.h	113;"	struct
+setup_address	usb\usb.h	137;"	member	struct:usb_type
 sim	lib\inc\stm8s.h	2718;"	macro
 sim	lib\inc\stm8s.h	2727;"	macro
 sim	lib\inc\stm8s.h	2737;"	macro
-stage	usb\usb.h	132;"	member	struct:usb_type
-state	peripheral.h	37;"	member	struct:__anon248
-t_HID_Dev	main.h	38;"	typedef	typeref:struct:s_HID_Dev
-t_USB_EP	usb\usb.h	119;"	typedef	typeref:struct:s_USB_EP
-t_USB_SetupReq	usb\usb.h	102;"	typedef	typeref:struct:usb_setup_req
-t_keys_struct	peripheral.h	39;"	typedef	typeref:struct:__anon248
-t_usb_ep_state	usb\usb.h	108;"	typedef	typeref:enum:e_usb_ep_state
+stage	usb\usb.h	135;"	member	struct:usb_type
+state	peripheral.h	33;"	member	struct:__anon251
+t_HID_Dev	main.h	69;"	typedef	typeref:struct:s_HID_Dev
+t_KeyCode	main.h	18;"	typedef	typeref:struct:__anon245
+t_Key_settings	main.h	46;"	typedef	typeref:struct:__anon249
+t_Key_settings_to_write	main.h	53;"	typedef	typeref:struct:__anon250
+t_USB_EP	usb\usb.h	122;"	typedef	typeref:struct:s_USB_EP
+t_USB_SetupReq	usb\usb.h	105;"	typedef	typeref:struct:usb_setup_req
+t_keys_struct	peripheral.h	35;"	typedef	typeref:struct:__anon251
+t_usb_ep_state	usb\usb.h	111;"	typedef	typeref:enum:e_usb_ep_state
 trap	lib\inc\stm8s.h	2720;"	macro
 trap	lib\inc\stm8s.h	2729;"	macro
 trap	lib\inc\stm8s.h	2739;"	macro
-trimming_stage	usb\usb.h	144;"	member	struct:usb_type	typeref:enum:usb_type::e_hsi_trimmer_stage
-tx_buffer	usb\usb.h	115;"	member	struct:s_USB_EP
-tx_data_sync	usb\usb.h	117;"	member	struct:s_USB_EP
-tx_length	usb\usb.h	116;"	member	struct:s_USB_EP
-tx_state	usb\usb.h	118;"	member	struct:s_USB_EP
+trimming_stage	usb\usb.h	147;"	member	struct:usb_type	typeref:enum:usb_type::e_hsi_trimmer_stage
+tx_buffer	usb\usb.h	118;"	member	struct:s_USB_EP
+tx_data_sync	usb\usb.h	120;"	member	struct:s_USB_EP
+tx_length	usb\usb.h	119;"	member	struct:s_USB_EP
+tx_state	usb\usb.h	121;"	member	struct:s_USB_EP
 u16	lib\inc\stm8s.h	226;"	typedef
 u32	lib\inc\stm8s.h	225;"	typedef
 u8	lib\inc\stm8s.h	227;"	typedef
@@ -4576,26 +4600,27 @@ uint16_t	lib\inc\stm8s.h	216;"	typedef
 uint32_t	lib\inc\stm8s.h	217;"	typedef
 uint8_t	lib\inc\stm8s.h	215;"	typedef
 usb	usb\usb.c	9;"	variable	typeref:struct:usb_type
-usb_calc_crc16	usb\usb.c	207;"	function	signature:(uint8_t * buffer, uint8_t length)
+usb_calc_crc16	usb\usb.c	213;"	function	signature:(uint8_t * buffer, uint8_t length)
 usb_configuration_descriptor	usb\usb_desc.c	25;"	variable
-usb_control_error	usb\usb.c	315;"	function	signature:(void)
-usb_copy_rx_packet	usb\usb.c	127;"	function	signature:(uint8_t EP_num)
+usb_control_error	usb\usb.c	332;"	function	signature:(void)
+usb_copy_rx_packet	usb\usb.c	130;"	function	signature:(uint8_t EP_num)
 usb_device_descriptor	usb\usb_desc.c	3;"	variable
-usb_packets_id_list	usb\usb.h	32;"	enum
+usb_packets_id_list	usb\usb.h	35;"	enum
 usb_report_descriptor	usb\usb_desc.c	90;"	variable
-usb_rx_ok	usb\usb.c	140;"	function	signature:(void)
-usb_send_ack	usb\usb.c	93;"	function	signature:(void)
-usb_send_nack	usb\usb.c	75;"	function	signature:(void)
-usb_send_packet	usb\usb.c	111;"	function	signature:(uint8_t EP_num)
-usb_setup_req	usb\usb.h	92;"	struct
-usb_states_list	usb\usb.h	25;"	enum
-usb_type	usb\usb.h	130;"	struct
-wIndex_HI	usb\usb.h	99;"	member	struct:usb_setup_req
-wIndex_LO	usb\usb.h	98;"	member	struct:usb_setup_req
-wLength_HI	usb\usb.h	101;"	member	struct:usb_setup_req
-wLength_LO	usb\usb.h	100;"	member	struct:usb_setup_req
-wValue_HI	usb\usb.h	97;"	member	struct:usb_setup_req
-wValue_LO	usb\usb.h	96;"	member	struct:usb_setup_req
+usb_rx_ok	usb\usb.c	143;"	function	signature:(void)
+usb_send_ack	usb\usb.c	96;"	function	signature:(void)
+usb_send_nack	usb\usb.c	78;"	function	signature:(void)
+usb_send_packet	usb\usb.c	114;"	function	signature:(uint8_t EP_num)
+usb_setup_req	usb\usb.h	95;"	struct
+usb_states_list	usb\usb.h	28;"	enum
+usb_type	usb\usb.h	133;"	struct
+wIndex_HI	usb\usb.h	102;"	member	struct:usb_setup_req
+wIndex_LO	usb\usb.h	101;"	member	struct:usb_setup_req
+wLength_HI	usb\usb.h	104;"	member	struct:usb_setup_req
+wLength_LO	usb\usb.h	103;"	member	struct:usb_setup_req
+wValue_HI	usb\usb.h	100;"	member	struct:usb_setup_req
+wValue_LO	usb\usb.h	99;"	member	struct:usb_setup_req
 wfi	lib\inc\stm8s.h	2721;"	macro
 wfi	lib\inc\stm8s.h	2730;"	macro
 wfi	lib\inc\stm8s.h	2740;"	macro
+write_flag	main.h	50;"	member	struct:__anon250
