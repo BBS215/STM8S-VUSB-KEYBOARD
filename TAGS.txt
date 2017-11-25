@@ -4352,9 +4352,9 @@ USB_CONNECT_PIN	usb\usb.h	14;"	macro
 USB_CONNECT_PORT	usb\usb.h	13;"	macro
 USB_CONNECT_TIMEOUT	usb\usb.h	11;"	macro
 USB_Class_DeInit_callback	main.c	276;"	function	signature:(void)
-USB_Class_DeInit_callback	usb\usb.h	168;"	prototype	signature:(void)
+USB_Class_DeInit_callback	usb\usb.h	169;"	prototype	signature:(void)
 USB_Class_Init_callback	main.c	252;"	function	signature:(uint8_t dev_config)
-USB_Class_Init_callback	usb\usb.h	167;"	prototype	signature:(uint8_t dev_config)
+USB_Class_Init_callback	usb\usb.h	168;"	prototype	signature:(uint8_t dev_config)
 USB_DESC_H_	usb\usb_desc.h	2;"	macro
 USB_DESC_TYPE_BOS	usb\usb_desc.h	37;"	macro
 USB_DESC_TYPE_CONFIGURATION	usb\usb_desc.h	31;"	macro
@@ -4365,9 +4365,9 @@ USB_DESC_TYPE_INTERFACE	usb\usb_desc.h	33;"	macro
 USB_DESC_TYPE_OTHER_SPEED_CONFIGURATION	usb\usb_desc.h	36;"	macro
 USB_DESC_TYPE_STRING	usb\usb_desc.h	32;"	macro
 USB_EP0_RxReady_callback	main.c	48;"	function	signature:(uint8_t *p_data, uint8_t length)
-USB_EP0_RxReady_callback	usb\usb.h	164;"	prototype	signature:(uint8_t *p_data, uint8_t length)
+USB_EP0_RxReady_callback	usb\usb.h	165;"	prototype	signature:(uint8_t *p_data, uint8_t length)
 USB_EP1_RxReady_callback	main.c	407;"	function	signature:(uint8_t *p_data, uint8_t length)
-USB_EP1_RxReady_callback	usb\usb.h	165;"	prototype	signature:(uint8_t *p_data, uint8_t length)
+USB_EP1_RxReady_callback	usb\usb.h	166;"	prototype	signature:(uint8_t *p_data, uint8_t length)
 USB_EP_DATA_READY	usb\usb.h	110;"	enumerator	enum:e_usb_ep_state
 USB_EP_NO_DATA	usb\usb.h	109;"	enumerator	enum:e_usb_ep_state
 USB_EP_WATCHDOG_ENABLE	usb\usb.h	18;"	macro
@@ -4379,13 +4379,13 @@ USB_FEATURE_TEST_MODE	usb\usb.h	78;"	macro
 USB_HID_descriptor	usb\usb_desc.c	75;"	variable
 USB_H_	usb\usb.h	2;"	macro
 USB_Init	usb\usb.c	38;"	function	signature:(void)
-USB_Init	usb\usb.h	158;"	prototype	signature:(void)
+USB_Init	usb\usb.h	159;"	prototype	signature:(void)
 USB_KeyboardReport_EXT1_Data_t	main.h	33;"	typedef	typeref:struct:__anon247
 USB_KeyboardReport_EXT2_Data_t	main.h	39;"	typedef	typeref:struct:__anon248
 USB_KeyboardReport_STD_Data_t	main.h	26;"	typedef	typeref:struct:__anon246
 USB_MAX_NUM_CONFIGURATION	usb\usb.h	7;"	macro
 USB_MAX_NUM_INTERFACES	usb\usb.h	8;"	macro
-USB_NRZI_RX_Decode	usb\usb.c	337;"	function	signature:(uint8_t EP_num)
+USB_NRZI_RX_Decode	usb\usb.c	337;"	function	signature:(uint8_t *p_data, uint8_t length)
 USB_PID_ACK	usb\usb.h	42;"	enumerator	enum:usb_packets_id_list
 USB_PID_DATA0	usb\usb.h	40;"	enumerator	enum:usb_packets_id_list
 USB_PID_DATA1	usb\usb.h	41;"	enumerator	enum:usb_packets_id_list
@@ -4425,20 +4425,20 @@ USB_STATE_CONFIGURED	usb\usb.h	68;"	macro
 USB_STATE_DEFAULT	usb\usb.h	66;"	macro
 USB_SYNC_BYTE	usb\usb.h	47;"	macro
 USB_Send_Data	usb\usb.c	241;"	function	signature:(uint8_t * buffer, uint8_t length, uint8_t EP_num)
-USB_Send_Data	usb\usb.h	163;"	prototype	signature:(uint8_t * buffer, uint8_t length, uint8_t EP_num)
+USB_Send_Data	usb\usb.h	164;"	prototype	signature:(uint8_t * buffer, uint8_t length, uint8_t EP_num)
 USB_Send_STALL	usb\usb.c	324;"	function	signature:(uint8_t EP_num)
 USB_Setup_Request_callback	main.c	285;"	function	signature:(t_USB_SetupReq *p_req)
-USB_Setup_Request_callback	usb\usb.h	166;"	prototype	signature:(t_USB_SetupReq *p_req)
+USB_Setup_Request_callback	usb\usb.h	167;"	prototype	signature:(t_USB_SetupReq *p_req)
 USB_String_Descriptors	usb\usb_desc.c	201;"	variable
 USB_String_Descriptors_Length	usb\usb_desc.c	208;"	variable
 USB_connect	usb\usb.c	68;"	function	signature:(void)
-USB_connect	usb\usb.h	160;"	prototype	signature:(void)
+USB_connect	usb\usb.h	161;"	prototype	signature:(void)
 USB_disconnect	usb\usb.c	73;"	function	signature:(void)
-USB_disconnect	usb\usb.h	161;"	prototype	signature:(void)
-USB_loop	usb\usb.c	366;"	function	signature:(void)
-USB_loop	usb\usb.h	159;"	prototype	signature:(void)
+USB_disconnect	usb\usb.h	162;"	prototype	signature:(void)
+USB_loop	usb\usb.c	365;"	function	signature:(void)
+USB_loop	usb\usb.h	160;"	prototype	signature:(void)
 USB_slow_loop	usb\usb.c	749;"	function	signature:(void)
-USB_slow_loop	usb\usb.h	162;"	prototype	signature:(void)
+USB_slow_loop	usb\usb.h	163;"	prototype	signature:(void)
 USE_STDPERIPH_DRIVER	lib\inc\stm8s.h	95;"	macro
 UsagePage	main.h	14;"	member	struct:__anon245
 VECTOR_ID	lib\inc\stm8s.h	2758;"	macro

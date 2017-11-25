@@ -254,13 +254,15 @@ int8_t USB_Send_Data(uint8_t * buffer, uint8_t length, uint8_t EP_num)
 			USB_disconnect();
 			USB_Reset();
 			usb.WDG_EP_timeout = -USB_EP_WATCHDOG_RECONNECT_DELAY;
+			return -1;
 #endif
 		}
 		usb.EP[0].tx_data_sync = USB_PID_DATA1;
 	} else { // EP 1 - INTR
 		if (usb.dev_state != USB_STATE_CONFIGURED) return -2;
 		if (length > 8) return -3; // 8 bytes max for INTR EP
-		usb.EP[1].tx_state = USB_EP_NO_DATA; // drop old packet
+		//usb.EP[1].tx_state = USB_EP_NO_DATA; // drop old packet
+		if (usb.EP[1].tx_state != USB_EP_NO_DATA) return -4;
 	}
 	
 	if (length == 0) flag = 1;	// Just send an empty packet
@@ -300,7 +302,19 @@ int8_t USB_Send_Data(uint8_t * buffer, uint8_t length, uint8_t EP_num)
 		// wait for transmission and then start the next
 		if (EP_num == 0)
 		{
-			while (usb.EP[EP_num].tx_state == USB_EP_DATA_READY) {}
+			//while (usb.EP[EP_num].tx_state == USB_EP_DATA_READY) {}
+			timeout = 60000;
+			while ((usb.EP[0].tx_state == USB_EP_DATA_READY)&&(timeout)) // wait for prev transmission 
+			{ timeout--; }
+			if (timeout == 0) {
+				usb.EP[0].tx_state = USB_EP_NO_DATA; // drop old packet
+#if (USB_EP_WATCHDOG_ENABLE == 1)
+				USB_disconnect();
+				USB_Reset();
+				usb.WDG_EP_timeout = -USB_EP_WATCHDOG_RECONNECT_DELAY;
+				return -1;
+#endif
+			}
 		}
 	}
 	
@@ -345,7 +359,6 @@ void USB_NRZI_RX_Decode(uint8_t *p_data, uint8_t length)
 		word >>=8;
 		word |= (p_data[i+1] << 8);
 		byte = 0;
-		j=0;
 		for(j=0;j<8;j++) {
 			if (word & (1 << (j+offset))) {
 				byte |= (uint8_t)(1 << j);

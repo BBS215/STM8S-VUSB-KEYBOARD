@@ -166,6 +166,8 @@ void BTN_USB_send_Loop(void)
 						HID_Dev.EXT2_KB_Report_changed_flag = 1; // состояние клавиш третьей клавиатуры изменилось
 						break;
 				}
+				if (g_KeyCode[i].Modifiers) // если клавише назначены модификаторы
+					HID_Dev.STD_KB_Report_changed_flag = 1; // состояние клавиш первой клавиатуры изменилось
 			}
 		}
 		HID_Dev.prev_key_mask = key_mask; // сохраняем состояние кнопок
@@ -177,9 +179,9 @@ void BTN_USB_send_Loop(void)
 		HID_Dev.STD_KB_Report.Modifier = 0; // сбрасываем байт модификаторов
 		for(i=0;i<BTN_CNT;i++) { // формируем байт модификаторов
 			if (key_mask & (1 << i)) { // если нажата клавиша i
-				if (g_KeyCode[i].UsagePage == STD_KEYBOARD_USAGE_PAGE) { // и UsagePage клавиши соответствует первой клавиатуре
+				//if (g_KeyCode[i].UsagePage == STD_KEYBOARD_USAGE_PAGE) { // и UsagePage клавиши соответствует первой клавиатуре
 					HID_Dev.STD_KB_Report.Modifier |= g_KeyCode[i].Modifiers; // применяем маску модификаторов данной клавиши
-				}
+				//}
 			}
 		}
 		

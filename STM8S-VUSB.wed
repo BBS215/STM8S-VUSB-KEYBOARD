@@ -449,12 +449,12 @@ XPos=-9
 MRUWidth=246
 Docking=True
 MRUDockID=59419
-MRUDockLeftPos=1592
+MRUDockLeftPos=1591
 MRUDockTopPos=64
-MRUDockRightPos=1855
+MRUDockRightPos=1854
 MRUDockBottomPos=94
 MRUFloatStyle=8192
-MRUFloatXPos=1592
+MRUFloatXPos=1591
 MRUFloatYPos=60
 Style=12213
 ExStyle=131852
@@ -649,12 +649,12 @@ XPos=-9
 MRUWidth=115
 Docking=True
 MRUDockID=59419
-MRUDockLeftPos=1592
+MRUDockLeftPos=1591
 MRUDockTopPos=64
-MRUDockRightPos=1724
+MRUDockRightPos=1723
 MRUDockBottomPos=94
 MRUFloatStyle=8192
-MRUFloatXPos=1592
+MRUFloatXPos=1591
 MRUFloatYPos=205
 Style=12213
 ExStyle=131852
@@ -1175,7 +1175,7 @@ ResourceID=0
 BarID=59423
 Horz=True
 Floating=True
-XPos=1592
+XPos=1591
 YPos=231
 Bars=3
 Bar#0=0
@@ -1206,7 +1206,7 @@ ResourceID=0
 BarID=59423
 Horz=True
 Floating=True
-XPos=1592
+XPos=1591
 YPos=86
 Bars=3
 Bar#0=0
@@ -1244,7 +1244,7 @@ ptn_Child2=ChildFrames
 
 [WorkState_v1_2.Frames.MainFrame]
 WindowPlacement=MCAAAAAACAAAAAAADAAAAAAAPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPHLAAAAAAEHAAAAAAEGEAAAAADBDAAAAA
-Title=ST Visual Develop - STM8S-VUSB.stw - [main.c]
+Title=ST Visual Develop - STM8S-VUSB.stw - [usb.c]
 
 [WorkState_v1_2.Frames.ChildFrames]
 ptn_Child1=Document-0
@@ -1252,6 +1252,7 @@ ptn_Child2=Document-1
 ptn_Child3=Document-2
 ptn_Child4=Document-3
 ptn_Child5=Document-4
+ptn_Child6=Document-5
 
 [WorkState_v1_2.Frames.ChildFrames.Document-0]
 ptn_Child1=ViewFrame-0
@@ -1260,8 +1261,8 @@ ptn_Child1=ViewFrame-0
 DocPathName=main.c
 DocumentString=
 DocTemplateIndex=0
-WindowPlacement=MCAAAAAACAAAAAAADAAAAAAAPPPPPPPPPPPPPPPPIPPPPPPPBOPPPPPPAAAAAAAAAAAAAAAAAPDAAAAALHBAAAAA
-IsActiveChildFrame=True
+WindowPlacement=MCAAAAAAAAAAAAAABAAAAAAAPPPPPPPPPPPPPPPPIPPPPPPPBOPPPPPPAAAAAAAAAAAAAAAAAPDAAAAALHBAAAAA
+IsActiveChildFrame=False
 IsFrameVisible=True
 
 [WorkState_v1_2.Frames.ChildFrames.Document-1]
@@ -1271,8 +1272,8 @@ ptn_Child1=ViewFrame-0
 DocPathName=usb\usb.c
 DocumentString=
 DocTemplateIndex=0
-WindowPlacement=MCAAAAAAAAAAAAAABAAAAAAAPPPPPPPPPPPPPPPPIPPPPPPPBOPPPPPPICAAAAAAKBAAAAAAAFCAAAAAIJBAAAAA
-IsActiveChildFrame=False
+WindowPlacement=MCAAAAAACAAAAAAADAAAAAAAPPPPPPPPPPPPPPPPIPPPPPPPBOPPPPPPICAAAAAAKBAAAAAAAFCAAAAAIJBAAAAA
+IsActiveChildFrame=True
 IsFrameVisible=True
 
 [WorkState_v1_2.Frames.ChildFrames.Document-2]
@@ -1305,5 +1306,16 @@ DocPathName=usb\usb_desc.c
 DocumentString=
 DocTemplateIndex=0
 WindowPlacement=MCAAAAAAAAAAAAAABAAAAAAAPPPPPPPPPPPPPPPPIPPPPPPPBOPPPPPPAKAAAAAAIGAAAAAAEJEAAAAAGOBAAAAA
+IsActiveChildFrame=False
+IsFrameVisible=True
+
+[WorkState_v1_2.Frames.ChildFrames.Document-5]
+ptn_Child1=ViewFrame-0
+
+[WorkState_v1_2.Frames.ChildFrames.Document-5.ViewFrame-0]
+DocPathName=usb\usb_rx.s
+DocumentString=
+DocTemplateIndex=0
+WindowPlacement=MCAAAAAAAAAAAAAABAAAAAAAPPPPPPPPPPPPPPPPIPPPPPPPBOPPPPPPIMAAAAAACIAAAAAAMLEAAAAAAACAAAAA
 IsActiveChildFrame=False
 IsFrameVisible=True
