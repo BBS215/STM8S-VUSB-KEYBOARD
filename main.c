@@ -82,6 +82,30 @@ void USB_EP0_RxReady_callback(uint8_t *p_data, uint8_t length)
 				HID_Dev.Key_settings.KeyCode = g_KeyCode[HID_Dev.Key_settings.key_num];
 			}
 			break;
+		case DEBUG_DEV_REPORT_ID: // управление отладкой
+			if (length < 6) break;
+			HID_Dev.DEBUG_DEV_report.cmd = p_data[1]; // CMD
+			HID_Dev.DEBUG_DEV_report.addr.addr_8.HI_byte = p_data[2]; // addr HI
+			HID_Dev.DEBUG_DEV_report.addr.addr_8.LO_byte = p_data[3]; // addr LO
+			switch(HID_Dev.DEBUG_DEV_report.cmd) {
+				default:
+				case 0: // пустая команда
+				case 1: // запрос на чтение 8-битного регистра
+				case 2: // запрос на чтение 16-битного регистра
+					HID_Dev.DEBUG_DEV_report.data.data_8.LO_byte = 0;
+					HID_Dev.DEBUG_DEV_report.data.data_8.HI_byte = 0;
+					break;
+				case 3: // запись 8-битного регистра
+					HID_Dev.DEBUG_DEV_report.data.data_8.LO_byte = p_data[5]; // data LO
+					*(uint8_t*)(HID_Dev.DEBUG_DEV_report.addr.addr_16) = HID_Dev.DEBUG_DEV_report.data.data_8.LO_byte;
+					break;
+				case 4: // запись 16-битного регистра
+					HID_Dev.DEBUG_DEV_report.data.data_8.HI_byte = p_data[4]; // data HI
+					HID_Dev.DEBUG_DEV_report.data.data_8.LO_byte = p_data[5]; // data LO
+					*(uint16_t*)(HID_Dev.DEBUG_DEV_report.addr.addr_16) = HID_Dev.DEBUG_DEV_report.data.data_16;
+					break;
+			}
+			break;
 	}
 }
 
@@ -268,6 +292,7 @@ int8_t USB_Class_Init_callback(uint8_t dev_config)
 	HID_Dev.STD_KB_Report_changed_flag = 1; 
 	HID_Dev.EXT1_KB_Report_changed_flag = 1;
 	HID_Dev.EXT2_KB_Report_changed_flag = 1;
+	HID_Dev.DEBUG_DEV_report.ReportID = DEBUG_DEV_REPORT_ID;
 	return 0;
 }
 
@@ -310,6 +335,16 @@ int8_t USB_Setup_Request_callback(t_USB_SetupReq *p_req)
 									return USB_Send_Data((uint8_t*)&HID_Dev.EXT2_KB_Report, sizeof(HID_Dev.EXT2_KB_Report), 0);
 								case READ_KEYS_REPORT_ID: // Read key settings
 									return USB_Send_Data((uint8_t*)&HID_Dev.Key_settings, sizeof(HID_Dev.Key_settings), 0);
+								case DEBUG_DEV_REPORT_ID: // чтение регистра
+								{
+									if (HID_Dev.DEBUG_DEV_report.cmd == 1) { // запрос на чтение 8-битного регистра
+										HID_Dev.DEBUG_DEV_report.data.data_8.LO_byte = *(uint8_t*)(HID_Dev.DEBUG_DEV_report.addr.addr_16);
+									} else
+									if (HID_Dev.DEBUG_DEV_report.cmd == 2) { // запрос на чтение 16-битного регистра
+										HID_Dev.DEBUG_DEV_report.data.data_16 = *(uint16_t*)(HID_Dev.DEBUG_DEV_report.addr.addr_16);
+									}
+									return USB_Send_Data((uint8_t*)&HID_Dev.DEBUG_DEV_report, sizeof(HID_Dev.DEBUG_DEV_report), 0);
+								}
 							}
 						}
 					}
@@ -334,6 +369,9 @@ int8_t USB_Setup_Request_callback(t_USB_SetupReq *p_req)
 								case READ_KEYS_REPORT_ID: // чтение настроек клавиши
 									// Это SETUP STAGE перед отправкой (хостом) пакета с 
 									// номером активной клавиши, см. USB_EP0_RxReady_callback
+								case DEBUG_DEV_REPORT_ID: // управление отладкой
+									// Это SETUP STAGE перед отправкой (хостом) пакета с 
+									// запросом, см. USB_EP0_RxReady_callback
 									return USB_Send_Data(NULL, 0, 0); // типа ACK
 							}
 						}

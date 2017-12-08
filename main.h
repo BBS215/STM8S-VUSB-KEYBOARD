@@ -52,6 +52,26 @@ typedef struct
 	t_KeyCode KeyCode;
 } t_Key_settings_to_write;
 
+typedef struct
+{
+	uint8_t ReportID;
+	uint8_t	cmd;
+	union {
+		struct {
+			uint8_t HI_byte;
+			uint8_t LO_byte;
+		} addr_8;
+		uint16_t addr_16;
+	} addr;
+	union {
+		struct {
+			uint8_t HI_byte;
+			uint8_t LO_byte;
+		} data_8;
+		uint16_t data_16;
+	} data;
+} t_Debug_dev_report;
+
 typedef struct s_HID_Dev 
 {
   uint8_t             	Protocol;   
@@ -66,6 +86,7 @@ typedef struct s_HID_Dev
 	t_Key_settings				Key_settings;
 	t_Key_settings_to_write	Key_settings_to_write;
 	uint16_t 							prev_key_mask;
+	t_Debug_dev_report		DEBUG_DEV_report;
 } t_HID_Dev;
 
 #endif // MAIN_H_
